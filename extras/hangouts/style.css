@@ -1,0 +1,5 @@
+@-moz-document domain("hangouts.google.com") {
+div.Wa {
+    display: none;
+}
+}
