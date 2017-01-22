@@ -1,0 +1,13 @@
+#!/bin/bash -e
+
+echo
+echo "available video files:"
+echo '-------------------------'
+ls /video-drive2/ | grep .raw
+
+echo
+echo "available trace files:"
+echo '-------------------------'
+ls /home/captaineo/salsify-results/traces | grep .up | xargs -I{} basename {} .up
+
+echo
