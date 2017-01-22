@@ -1,0 +1,18 @@
+# ~/.tmuxinator/captain-eo.yml
+
+name: captain-eo
+root: ~/projects/salsify-results/
+pre_window: sudo su
+
+windows:
+  - experiment:
+      layout: tiled
+      panes:
+        - capture:
+          - echo "Capture"
+        - playback:
+          - echo "Playback"
+        - iotop:
+          - iotop
+        - top:
+          - top

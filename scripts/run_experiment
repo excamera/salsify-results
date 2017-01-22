@@ -1,0 +1,56 @@
+#!/bin/bash -e
+
+if [[ -z $1 ]]; then
+    echo "usage: $0 EXPERIMENT_PATH"
+    exit -1
+fi
+
+readonly SCRIPT_FILEPATH=$(readlink -m ${BASH_SOURCE[0]})
+readonly SCRIPT_DIRPATH=$(dirname $SCRIPT_FILEPATH)
+source $SCRIPT_DIRPATH/experiment_common.sh
+
+readonly SESSION=$USER
+readonly EXPERIMENT_PATH=$1
+
+create_experiment_set_variables $EXPERIMENT_PATH
+create_experiment $EXPERIMENT_PATH
+
+cd $EXPERIMENT_DIR
+TRACE_FILE=""
+for trace in $(ls /home/captaineo/salsify-results/traces/*.up); do
+    trace_no_extension=$(basename $trace .up)
+
+    if [[ $EXPERIMENT_DIR == */$trace_no_extension/* ]]; then
+	TRACE_FILE=$trace_no_extension
+    fi
+done
+
+if [[ -z /home/captaineo/salsify-results/traces/$TRACE_FILE ]]; then
+    echo "could not find matching trace file"
+    exit -1
+fi
+
+if [[ ! -f /home/captaineo/salsify-results/traces/$TRACE_FILE.down ]]; then
+    echo "could not find $TRACE_FILE.down"
+    exit -1
+fi
+
+cp /home/captaineo/salsify-results/traces/$TRACE_FILE.up .
+cp /home/captaineo/salsify-results/traces/$TRACE_FILE.down .
+
+tmux start-server
+
+tmux -2 new-session -d -s $SESSION
+tmux send-keys "playback.sh $EXPERIMENT_VIDEO_NAME.playback.raw $EXPERIMENT_VIDEO_NAME.playback.csv $TRACE_FILE.up $TRACE_FILE.down" C-m
+
+tmux splitw -v
+tmux send-keys "sleep 50 && capture.sh $EXPERIMENT_VIDEO_NAME.capture.raw $EXPERIMENT_VIDEO_NAME.capture.csv" C-m
+
+tmux splitw -v
+tmux send-keys "top" C-m
+
+tmux splitw -v
+tmux send-keys "iotop" C-m
+
+tmux select-layout -t $SESSION:0 tiled
+tmux -2 attach-session -t $SESSION

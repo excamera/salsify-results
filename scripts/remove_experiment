@@ -19,7 +19,12 @@ mkdir -p /.backup/autobackup/
 cp -rl $SCRIPT_DIRPATH/../../salsify-results /.backup/autobackup/$(date +%Y-%m-%d:%H:%M:%S)
 
 echo "removing: " $EXTERNAL_DRIVE/$RESULTS_DIR
-rm -r $EXTERNAL_DRIVE/$RESULTS_DIR
+if [[ $(readlink -e $EXTERNAL_DRIVE/$RESULTS_DIR) != /video-drive1/salsify-results ]]; then
+    rm -r $EXTERNAL_DRIVE/$RESULTS_DIR
+else
+    echo "ERROR: trying to remove the entire results dir. This is probably as bug..."
+    exit -1
+fi
 
 echo "removing: " $EXPERIMENT_DIR
 rm -r $EXPERIMENT_DIR
