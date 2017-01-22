@@ -5,16 +5,21 @@ if [[ -z $1 ]]; then
     exit -1
 fi
 
-readonly SCRIPT_FILEPATH=$(readlink -e ${BASH_SOURCE[0]})
+readonly SCRIPT_FILEPATH=$(readlink -m ${BASH_SOURCE[0]})
 readonly SCRIPT_DIRPATH=$(dirname $SCRIPT_FILEPATH)
 source $SCRIPT_DIRPATH/experiment_common.sh
 
 remove_experiment_set_variables $1
+
+echo "making backup"
+mkdir -p /video-drive1/.backup/autobackup/
+cp -rl $EXTERNAL_DRIVE /video-drive1/.backup/autobackup/$(date +%Y-%m-%d:%H:%M:%S)
+
+mkdir -p /.backup/autobackup/
+cp -rl $SCRIPT_DIRPATH/../../salsify-results /.backup/autobackup/$(date +%Y-%m-%d:%H:%M:%S)
 
 echo "removing: " $EXTERNAL_DRIVE/$RESULTS_DIR
 rm -r $EXTERNAL_DRIVE/$RESULTS_DIR
 
 echo "removing: " $EXPERIMENT_DIR
 rm -r $EXPERIMENT_DIR
-
-

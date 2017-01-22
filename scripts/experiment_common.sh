@@ -1,10 +1,10 @@
 
 function create_experiment_set_variables {
     readonly EXTERNAL_DRIVE=/video-drive1/salsify-results
-    readonly INTERNAL_DRIVE=/video-drive1
+    readonly INTERNAL_DRIVE=/video-drive2
     
     readonly EXPERIMENT_VIDEO_NAME=$(basename $1)
-    readonly EXPERIMENT_VIDEO_PATH=$(readlink -e $(dirname $1))
+    readonly EXPERIMENT_VIDEO_PATH=$(readlink -m $(dirname $1))
     
     readonly EXPERIMENT_DIR=$EXPERIMENT_VIDEO_PATH/$EXPERIMENT_VIDEO_NAME
     if [[ -d $EXPERIMENT_DIR || -f $EXPERIMENT_DIR ]]; then
@@ -13,9 +13,11 @@ function create_experiment_set_variables {
 	exit -1
     fi
     
-    readonly RESULTS_DIR=$(echo $EXPERIMENT_DIR | awk -F"salsify-results/benchmarks/"  '{print $2}') 
+    echo $EXPERIMENT_DIR
+    readonly RESULTS_DIR=$(echo $EXPERIMENT_DIR | awk -F"salsify-results/benchmarks"  '{print $2}')
+    echo $RESULTS_DIR
     if [[ -z $RESULTS_DIR ]]; then
-	echo "Experments must be in the salsify-results/benchmarks/ dir"
+	echo "Experments must be in the salsify-results/benchmarks dir"
 	exit -1
     fi
 
@@ -37,7 +39,7 @@ function remove_experiment_set_variables {
     readonly INTERNAL_DRIVE=/video-drive1
     
     readonly EXPERIMENT_VIDEO_NAME=$(basename $1)
-    readonly EXPERIMENT_VIDEO_PATH=$(readlink -e $(dirname $1))
+    readonly EXPERIMENT_VIDEO_PATH=$(readlink -m $(dirname $1))
     
     readonly EXPERIMENT_DIR=$EXPERIMENT_VIDEO_PATH/$EXPERIMENT_VIDEO_NAME
     readonly RESULTS_DIR=$(echo $EXPERIMENT_DIR | awk -F"salsify-results/benchmarks/"  '{print $2}') 

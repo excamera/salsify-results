@@ -5,11 +5,16 @@ if [[ -z $1 ]]; then
     exit -1
 fi
 
-readonly SCRIPT_FILEPATH=$(readlink -e ${BASH_SOURCE[0]})
+readonly SCRIPT_FILEPATH=$(readlink -m ${BASH_SOURCE[0]})
 readonly SCRIPT_DIRPATH=$(dirname $SCRIPT_FILEPATH)
-source $SCRIPT_DIRPATH/experiment_common.sh
 
+source $SCRIPT_DIRPATH/experiment_common.sh
 create_experiment_set_variables $1
+
+if [[ ! -f $INTERNAL_DRIVE/$EXPERIMENT_VIDEO_NAME.playback.raw ]]; then
+    echo "video file: " $INTERNAL_DRIVE/$EXPERIMENT_VIDEO_NAME.playback.raw " does not exist"
+    exit -1
+fi
 
 echo "initializing: " $EXTERNAL_DRIVE/$RESULTS_DIR
 mkdir -p $EXTERNAL_DRIVE/$RESULTS_DIR
@@ -18,9 +23,15 @@ mkdir -p $EXTERNAL_DRIVE/$RESULTS_DIR/playback-frames
 touch $EXTERNAL_DRIVE/$RESULTS_DIR/$EXPERIMENT_VIDEO_NAME.capture.raw
 
 echo "initializing: " $EXPERIMENT_DIR
-mkdir $EXPERIMENT_DIR
+mkdir -p $EXPERIMENT_DIR
 ln -s $EXTERNAL_DRIVE/$RESULTS_DIR/capture-frames $EXPERIMENT_DIR
 ln -s $EXTERNAL_DRIVE/$RESULTS_DIR/playback-frames $EXPERIMENT_DIR
 ln -s $EXTERNAL_DRIVE/$RESULTS_DIR/$EXPERIMENT_VIDEO_NAME.capture.raw $EXPERIMENT_DIR
 ln -s $INTERNAL_DRIVE/$EXPERIMENT_VIDEO_NAME.playback.raw $EXPERIMENT_DIR
 
+echo "making backup"
+mkdir -p /video-drive1/.backup/autobackup/
+cp -rl $EXTERNAL_DRIVE /video-drive1/.backup/autobackup/$(date +%Y-%m-%d:%H:%M:%S)
+
+mkdir -p /.backup/autobackup/
+cp -rl $SCRIPT_DIRPATH/../../salsify-results /.backup/autobackup/$(date +%Y-%m-%d:%H:%M:%S)
