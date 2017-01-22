@@ -1,0 +1,3 @@
+# Reading from decklink interface to the video file: /home/captaineo/salsify-results/benchmarks/goodbad/hangouts/video2_720p60/video2_720p60.capture.raww
+# Time stamp: Sat Jan 21 16:05:32 2017
+# frame_index,upper_left_barcode,lower_right_barcode,cpu_timestamp,decklink_hardwaretimestamp,decklink_frame_reference_timestamp,decklink_frame_reference_duration

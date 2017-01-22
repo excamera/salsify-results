@@ -1,5 +1,1 @@
 # do not add any big binary videos
-*.raw
-capture-frames
-playback-frames
-.tmp.csv
