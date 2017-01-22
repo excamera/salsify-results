@@ -1,0 +1,9 @@
+@-moz-document domain("appr.tc") {
+#mini-video {
+    display: none;
+}
+
+#local-video {
+    display:none;
+}
+}
