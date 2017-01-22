@@ -1,0 +1,20 @@
+#!/bin/bash -e
+
+if [[ -z $1 ]]; then
+    echo "usage: $0 EXPERIMENT_DIR_TO_REMOVE"
+    exit -1
+fi
+
+readonly SCRIPT_FILEPATH=$(readlink -e ${BASH_SOURCE[0]})
+readonly SCRIPT_DIRPATH=$(dirname $SCRIPT_FILEPATH)
+source $SCRIPT_DIRPATH/experiment_common.sh
+
+remove_experiment_set_variables $1
+
+echo "removing: " $EXTERNAL_DRIVE/$RESULTS_DIR
+rm -r $EXTERNAL_DRIVE/$RESULTS_DIR
+
+echo "removing: " $EXPERIMENT_DIR
+rm -r $EXPERIMENT_DIR
+
+
