@@ -1,0 +1,186 @@
+#!/usr/bin/perl -w
+
+# script to compute aggregate statistics from an analysis run
+
+use strict;
+use POSIX;
+use List::Util qw[sum min max];
+
+unless ( scalar @ARGV == 2 ) {
+  die qq{Usage: $0 analysis_file playback_file\n};
+}
+
+sub parse_analysis_file ($) {
+  my ( $filename ) = @_;
+
+  print STDERR qq{Parsing analysis file $filename... };
+
+  open( my $analysis, $filename ) or die qq{$!};
+
+  # match analysis file header
+  my $files = <$analysis>;
+  die qq{Unrecognized format: $files} unless $files =~ m{playback.*capture};
+  my $timestamp = <$analysis>;
+  die qq{Unrecognized timestamp: $timestamp} unless $timestamp =~ m{Timestamp};
+  chomp( my $headers = <$analysis> );
+  die qq{Unrecognized headers: $headers} unless $headers eq q{# frame_index,sent_cpu_timestamp,received_cpu_timestamp,delay_cpu_time,sent_decklink_timestamp,received_decklink_time,delay_decklink_time,ssim_total,ssim_Y,ssim_Cb,ssim_Cr};
+
+  my %results;
+
+  my $earliest_receive_time;
+  my $latest_receive_time;
+
+  while (<$analysis>) {
+    chomp;
+    next LINE if m{^#}; # skip comments
+
+    my ( $frame_index, $ts_sent_us, $ts_rec_us, $frame_delay_us, $Y_ssim_dB ) = (split /,/, $_)[ 0, 4, 5, 6, 8 ];
+    die qq{Timestamp difference mismatch: $_} unless $ts_rec_us - $ts_sent_us == $frame_delay_us;
+
+    die if ( exists $results{ $frame_index } );
+    if ( not defined $earliest_receive_time ) {
+      $earliest_receive_time = $ts_rec_us;
+    }
+    $latest_receive_time = $ts_rec_us;
+
+    $results{ $frame_index } = { sent_us => $ts_sent_us,
+				 delay_us => $frame_delay_us,
+				 Y_ssim_dB => $Y_ssim_dB };
+  }
+
+  close( $analysis ) or die qq{$_};
+
+  my $duration = ($latest_receive_time - $earliest_receive_time) / 1.e6;
+
+  printf STDERR qq{done.\nReceived %d frames in %.2f seconds (%.1f fps).\n},
+    scalar keys %results, $duration, (scalar keys %results) / $duration;
+
+  return \%results;
+}
+
+sub parse_playback_file ($) {
+  my ( $filename ) = @_;
+
+  print STDERR qq{Parsing playback file $filename... };
+
+  open( my $playback, $filename ) or die qq{$!};
+
+  # match analysis file header
+  my $files = <$playback>;
+  die qq{Unrecognized format: $files} unless $files =~ m{Writing video to decklink};
+  my $timestamp = <$playback>;
+  die qq{Unrecognized timestamp: $timestamp} unless $timestamp =~ m{Time stamp};
+  chomp( my $headers = <$playback> );
+  die qq{Unrecognized headers: $headers} unless $headers eq q{# frame_index,upper_left_barcode,lower_right_barcode,cpu_time_scheduled,cpu_time_completed,decklink_hardwaretime_scheduled,decklink_hardwaretime_completed_callback,decklink_frame_completed_reference_time};
+
+  my %results;
+  while ( <$playback> ) {
+    chomp;
+    next LINE if m{^#}; # skip comments
+
+    my ( $frame_index, $ts_sent_us ) = (split /,/, $_)[ 0, 7 ];
+    die if ( exists $results{ $frame_index } );
+    $results{ $frame_index } = { sent_us => $ts_sent_us };
+  }
+
+  close( $playback ) or die qq{$!};
+  print STDERR qq{done.\n};
+
+  return \%results;
+}
+
+sub db_to_raw ($) {
+  my ( $ssim_dB ) = @_;
+  return 1 - 10 ** ( - $ssim_dB / 10 );
+}
+
+sub raw_to_db ($) {
+  my ( $ssim_raw ) = @_;
+  return -10 * log10( 1 - $ssim_raw );
+}
+
+sub quantile ($@) {
+  my ( $quantile, @array ) = @_;
+  if ( scalar @array == 0 ) {
+    die q{Can't take quantile of empty array};
+  }
+  @array = sort { $a <=> $b } @array;
+  my $index_low = floor( $#array * $quantile );
+  my $index_high = ceil( $#array * $quantile );
+  return ( $array[ $index_low ] + $array[ $index_high ] ) / 2.0;
+}
+
+my ( $analysis_file, $playback_file ) = @ARGV;
+my $playback = parse_playback_file( $playback_file );
+my $analysis = parse_analysis_file( $analysis_file );
+
+my @ssims_dB  = map { $_->{ Y_ssim_dB } } values %{ $analysis };
+my @ssims_raw = map { db_to_raw( $_ ) } @ssims_dB;
+my $average_ssim_raw = sum( @ssims_raw ) / @ssims_raw;
+my $average_ssim_dB = raw_to_db( $average_ssim_raw );
+my $min_ssim_dB = min( @ssims_dB );
+my $max_ssim_dB = max( @ssims_dB );
+
+printf qq{Mean SSIM: %.2f dB (range %.2f .. %.2f)\n}, $average_ssim_dB, $min_ssim_dB, $max_ssim_dB;
+
+# delay analysis
+
+# confirm all the frames are in the playback log
+my @frames_sent = sort { $a <=> $b } keys %{ $playback };
+my @frames_received = sort { $a <=> $b } keys %{ $analysis };
+for ( my $i = 0; $i <= $frames_sent[ -1 ]; $i++ ) {
+  die qq{Missing frame #$i} unless defined $playback->{ $i };
+  die qq{Confused frame #$i} unless $i == $frames_sent[ $i ];
+}
+
+die unless @frames_received <= @frames_sent;
+
+# confirm logs agree on when each frame was sent
+for my $frame_no ( keys %{ $analysis } ) {
+  if ( defined $playback->{ $frame_no } ) {
+    die qq{Frame time mismatch: $frame_no} unless $playback->{ $frame_no }{ sent_us } == $analysis->{ $frame_no }{ sent_us };
+  }
+}
+
+# measure signal delay
+my @frame_delays;
+my %signal_delay;
+my $last_sent_time;
+my $frame_interval = (1000000 / (60000/1001));
+my $invariant_delay = 4 * $frame_interval; # measured in loopback test with ffplay
+printf STDERR qq{Subtracting invariant delay of %.0f us.\n}, $invariant_delay;
+for ( my $frame_no = 0; $frame_no < (scalar keys %{ $playback }); $frame_no++ ) {
+  my $sent_time = $playback->{ $frame_no }{ sent_us };
+  if ( defined $last_sent_time ) {
+    if ( $sent_time < $last_sent_time + $frame_interval - 1000
+	 or $sent_time > $last_sent_time + $frame_interval + 1000 ) {
+      die qq{Sent frame missed its schedule: $frame_no};
+    }
+  }
+  $last_sent_time = $sent_time;
+
+  if ( defined $analysis->{ $frame_no } ) {
+    my $corrected_frame_delay = $analysis->{ $frame_no }{ delay_us }  - $invariant_delay;
+    die if $corrected_frame_delay <= 0;
+    push @frame_delays, $corrected_frame_delay;
+    $signal_delay{ $frame_no } = $corrected_frame_delay;
+  }
+}
+
+# densify signal delays
+for ( my $frame_no = $frames_received[ -1 ]; $frame_no >= 0; $frame_no-- ) {
+  if ( not defined $signal_delay{ $frame_no } ) {
+    $signal_delay{ $frame_no } = $signal_delay{ $frame_no + 1 } + $frame_interval;
+  }
+}
+
+my @signal_delays = values %signal_delay;
+
+my $mean_frame_delay = sum( @frame_delays ) / @frame_delays;
+my $p95_frame_delay = quantile( .95, @frame_delays );
+printf qq{Frame delay: mean %.0f ms, p95 %.0f ms\n}, $mean_frame_delay / 1.e3, $p95_frame_delay / 1.e3;
+
+my $mean_signal_delay = sum( @signal_delays ) / @signal_delays;
+my $p95_signal_delay = quantile( .95, @signal_delays );
+
+printf qq{Signal delay: mean %.0f ms, p95 %.0f ms\n}, $mean_signal_delay / 1.e3, $p95_signal_delay / 1.e3;
