@@ -3,7 +3,7 @@
 echo
 echo "available video files:"
 echo '-------------------------'
-ls /video-drive2/ | grep .raw
+ls /video-drive2/ | grep .raw | xargs -I{} basename {} .playback.raw
 
 echo
 echo "available trace files:"
