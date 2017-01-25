@@ -130,6 +130,24 @@ def parse_analysis_file(analysis_file, frames):
         'total_count': result['count_received']
     }
 
+def parse_downlink_log(downlink_log):
+    print("> reading the downlink log file: {}".format(downlink_log), file=sys.stderr)
+
+    result['delivery_opportunities'] = 0
+
+    with open(downlink_log) as f:
+        for line in f:
+            line = line.strip()
+            if line.startswith("#"): continue
+
+            if '#' in line:
+                result['delivery_opportunities'] += 1
+
+    return {
+        'packet_delivery_opportunities': result['delivery_opportunities']
+    }
+
+
 def compute_signal_delay(frames):
     delays = []
 
@@ -152,7 +170,7 @@ if __name__ == '__main__':
     if len(sys.argv) == 0:
         sys.exit(1)
 
-    if len(sys.argv) != 3:
+    if len(sys.argv) != 4:
         usage(sys.argv[0])
         sys.exit(1)
 
@@ -160,6 +178,7 @@ if __name__ == '__main__':
     result = parse_analysis_file(sys.argv[1], parse_result['frames'])
 
     result.update(compute_signal_delay(parse_result['frames']))
+    result.update(parse_downlink_log(sys.argv[3]))
 
     print()
     pprint(result, indent=1)
