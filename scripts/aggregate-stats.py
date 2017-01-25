@@ -31,6 +31,7 @@ def parse_playback_file(playback_file):
     print("> reading the playback file: {}".format(playback_file), file=sys.stderr)
 
     result = {}
+    frames = []
 
     with open(playback_file) as f:
         i = 0
@@ -44,15 +45,20 @@ def parse_playback_file(playback_file):
             assert data[0] == i, "frame not find: {}".format(i)
             assert data[1] == data[2], "UL and LR barcodes don't match for frame {}".format(i)
 
+            frames += [{
+                'sent': data[7]
+            }]
+
             i += 1
 
     print("> reading playback file done successfully.", file=sys.stderr)
 
     result['played_frames'] = i
+    result['frames'] = frames
 
     return result
 
-def parse_analysis_file(analysis_file):
+def parse_analysis_file(analysis_file, frames):
     print("> reading the analysis file: {}".format(analysis_file), file=sys.stderr)
 
     result = {
@@ -81,6 +87,9 @@ def parse_analysis_file(analysis_file):
 
             assert len(data) == 11, "missing fields in frame: {}".format(i)
             assert data[0] >= i, "frame appeared not in order: {}".format(i)
+
+            i = data[0]
+
             assert not result['last_received'] or result['last_received'] <= data[5]
             assert data[5] > data[4], "send time is before receive time for frame {}".format(i)
             assert (data[5] - data[4]) == data[6], "delay value is wrong for frame {}".format(i)
@@ -97,10 +106,10 @@ def parse_analysis_file(analysis_file):
                                                              + SSIM.db2n(data[8])) \
                                                              / (result['count_received'] + 1)
             result['count_received'] += 1
-
             result['delays'] += [data[6]]
 
-            i = data[0]
+            frames[i]['received'] = data[5]
+
 
     assert len(result['delays']) == result['count_received'], "count mismatch"
 
@@ -118,8 +127,26 @@ def parse_analysis_file(analysis_file):
         },
         'total_time': '{:.2f} s'.format((result['last_received'] - result['first_received']) / 1000 ** 2),
         'fps': result['count_received'] / ((result['last_received'] - result['first_received']) / 1000 ** 2),
+        'total_count': result['count_received']
     }
 
+def compute_signal_delay(frames):
+    delays = []
+
+    v = []
+
+    for frame in frames:
+        v += [frame['sent']]
+        if frame.get('received'):
+            delays += [frame.get('received') - x for x in v]
+            v = []
+
+    return {
+        'signal_delay': {
+            'mean': '{:.2f} ms'.format((np.mean(delays) - INVARIANT_DELAY) / 1000),
+            'p95': '{:.2f} ms'.format((np.percentile(delays, 95) - INVARIANT_DELAY) / 1000),
+        }
+    }
 
 if __name__ == '__main__':
     if len(sys.argv) == 0:
@@ -129,8 +156,10 @@ if __name__ == '__main__':
         usage(sys.argv[0])
         sys.exit(1)
 
-    parse_playback_file(sys.argv[2])
-    result = parse_analysis_file(sys.argv[1])
+    parse_result = parse_playback_file(sys.argv[2])
+    result = parse_analysis_file(sys.argv[1], parse_result['frames'])
+
+    result.update(compute_signal_delay(parse_result['frames']))
 
     print()
     pprint(result, indent=1)
