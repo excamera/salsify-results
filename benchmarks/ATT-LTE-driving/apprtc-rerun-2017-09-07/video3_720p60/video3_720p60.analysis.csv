@@ -1,5 +1,5 @@
 # playback: video3_720p60.playback.raw capture: video3_720p60.capture.raw
-# Timestamp: 2017-09-07 12:19:15.732120
+# Timestamp: 2017-09-07 12:30:59.939467
 # frame_index,sent_cpu_timestamp,received_cpu_timestamp,delay_cpu_time,sent_decklink_timestamp,received_decklink_time,delay_decklink_time,ssim_total,ssim_Y,ssim_Cb,ssim_Cr
 0,1504809991574265,1504809993735966,2161701,67178968884,67181129861,2160977,12.1534,11.2114,14.8278,11.298
 310,1504809996745682,1504810000208582,3462900,67184140217,67187602384,3462167,16.5062,15.2924,19.2081,15.934
