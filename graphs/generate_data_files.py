@@ -6,7 +6,7 @@ import subprocess as sub
 import json
 
 def usage(argv0):
-    print("{argv0} EXPERIMENT-LIST-FILE OUTPUT-DIR")
+    print("{argv0} EXPERIMENT-LIST-FILE OUTPUT-DIR".format(argv0=argv0))
 
 curdir = os.path.dirname(__file__)
 
@@ -50,8 +50,8 @@ def main(experiment_list_file, output_dir):
             row = [str(x) for x in row]
 
             with open(os.path.join(output_dir, "%s.dat" % label), "w") as fout:
-                fout.write("# " + ",".join(COLUMNS) + "\n")
-                fout.write(",".join(row))
+                fout.write("# " + " ".join(COLUMNS) + "\n")
+                fout.write(" ".join(row))
                 fout.write("\n")
 
 if __name__ == '__main__':
