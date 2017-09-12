@@ -1,0 +1,7 @@
+TMobile-UMTS-driving/apprtc/video3_720p60
+TMobile-UMTS-driving/apprtc-svc-2s-3t/video3_720p60
+TMobile-UMTS-driving/facetime/video3_720p60
+TMobile-UMTS-driving/hangouts/video3_720p60
+TMobile-UMTS-driving/salsify2/video3_720p60
+TMobile-UMTS-driving/salsify4/video3_720p60
+TMobile-UMTS-driving/skype/video3_720p60
