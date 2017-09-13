@@ -119,14 +119,14 @@ def parse_analysis_file(analysis_file, frames):
 
     return {
         'ssim': {
-            'mean': SSIM.n2db(result['average_ssim']),
-            'min': result['min_ssim'],
-            'max': result['max_ssim'],
-            'p5':    '{:.4f}'.format(SSIM.n2db(np.percentile(result['ssims'], 5))),
-            'p95':   '{:.4f}'.format(SSIM.n2db(np.percentile(result['ssims'], 95))),
-            'Xmin':  '{:.4f}'.format(SSIM.n2db(np.min(result['ssims']))),
-            'Xmax':  '{:.4f}'.format(SSIM.n2db(np.max(result['ssims']))),
-            'Xmean': '{:.4f}'.format(SSIM.n2db(np.mean(result['ssims'])))
+            'p5':     '{:.4f}'.format(SSIM.n2db(np.percentile(result['ssims'], 5))),
+            'p95':    '{:.4f}'.format(SSIM.n2db(np.percentile(result['ssims'], 95))),
+            'p25':    '{:.4f}'.format(SSIM.n2db(np.percentile(result['ssims'], 25))),
+            'p75':    '{:.4f}'.format(SSIM.n2db(np.percentile(result['ssims'], 75))),
+            'median': '{:.4f}'.format(SSIM.n2db(np.median(result['ssims']))),
+            'min':    '{:.4f}'.format(SSIM.n2db(np.min(result['ssims']))),
+            'max':    '{:.4f}'.format(SSIM.n2db(np.max(result['ssims']))),
+            'mean':   '{:.4f}'.format(SSIM.n2db(np.mean(result['ssims'])))
         },
         'frame_delay': {
             'mean': '{:.2f}'.format((np.mean(result['delays']) - INVARIANT_DELAY) / 1000),
@@ -170,8 +170,11 @@ def compute_signal_delay(frames):
     return {
         'signal_delay': {
             'mean': '{:.2f}'.format((np.mean(delays) - INVARIANT_DELAY) / 1000),
+            'median': '{:.2f}'.format((np.median(delays) - INVARIANT_DELAY) / 1000),
             'p5':   '{:.2f}'.format((np.percentile(delays, 5) - INVARIANT_DELAY) / 1000),
             'p95':  '{:.2f}'.format((np.percentile(delays, 95) - INVARIANT_DELAY) / 1000),
+            'p25':  '{:.2f}'.format((np.percentile(delays, 25) - INVARIANT_DELAY) / 1000),
+            'p75':  '{:.2f}'.format((np.percentile(delays, 75) - INVARIANT_DELAY) / 1000),
         }
     }
 
