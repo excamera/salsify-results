@@ -156,8 +156,8 @@ set ylabel "video quality (SSIM dB)"
 set ylabel font "Arial, 28" textcolor lt -1 rotate by -270 offset -2, 0
 set y2label ""
 set y2label  font "" textcolor lt -1 rotate by -270
-set xrange [ 9400 : 600 ] noreverse nowriteback
-set yrange [ 10 : 16 ] noreverse nowriteback
+set xrange [ 8990 : 600 ] noreverse nowriteback
+set yrange [ 9 : 16 ] noreverse nowriteback
 set xtics (100, 200, 300, 500, 700, 1000, 2000, 5000, 7000, 9500)
 set y2range [ * : * ] noreverse nowriteback
 set zlabel ""
@@ -193,16 +193,12 @@ set psdir
 set fit brief errorvariables nocovariancevariables errorscaling prescale nowrap v5
 
 plot "WebRTC-SVC.dat" using 3:4 with linespoints ls 1 ps 3 lt rgb "#AC4F1F", \
-"WebRTC-SVC.dat" using 3:4:("WebRTC-SVC") with labels left offset -1.8, char 2 font "Arial:Bold, 28" tc rgb "#AC4F1F" notitle,\
-"Skype.dat" using 3:4 with linespoints ls 2 ps 3 lt rgb "#1A95C2", \
-"Skype.dat" using 3:4:("Skype") with labels center offset -3.5, char 2 font "Arial:Bold, 28" tc rgb "#1A95C2" notitle,\
-"Diet-Salsify.dat" using 3:4 with linespoints ls 3 ps 3 lt rgb "#DF006F", \
+"WebRTC-SVC.dat" using 3:4:("WebRTC-SVC") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "#AC4F1F" notitle,\
+"Diet-Salsify.dat" using 3:4 with linespoints ls 2 ps 3 lt rgb "#DF006F", \
 "Diet-Salsify.dat" using 3:4:("Diet-Salsify") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "#DF006F" notitle,\
-"Facetime.dat" using 3:4 with linespoints ls 4 ps 3 lt rgb "#37A313", \
-"Facetime.dat" using 3:4:("Facetime") with labels center offset 0, char -2 font "Arial:Bold, 28" tc rgb "#37A313" notitle,\
-"Hangouts.dat" using 3:4 with linespoints ls 5 ps 3 lt rgb "#7E4CB6", \
+"Hangouts.dat" using 3:4 with linespoints ls 3 ps 3 lt rgb "#7E4CB6", \
 "Hangouts.dat" using 3:4:("Hangouts") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "#7E4CB6" notitle,\
-"Salsify.dat" using 3:4 with linespoints ls 6 ps 3 lt rgb "#DF0000", \
+"Salsify.dat" using 3:4 with linespoints ls 4 ps 3 lt rgb "#DF0000", \
 "Salsify.dat" using 3:4:("Salsify") with labels center offset 0, char -2 font "Arial:Bold, 28" tc rgb "#DF0000" notitle,\
-"WebRTC.dat" using 3:4 with linespoints ls 7 ps 3 lt rgb "#F26822", \
-"WebRTC.dat" using 3:4:("WebRTC") with labels center offset 0, char -2 font "Arial:Bold, 28" tc rgb "#F26822" notitle
+"WebRTC.dat" using 3:4 with linespoints ls 5 ps 3 lt rgb "#F26822", \
+"WebRTC.dat" using 3:4:("WebRTC") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "#F26822" notitle
