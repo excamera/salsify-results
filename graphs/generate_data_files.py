@@ -35,8 +35,9 @@ def main(experiment_list_file, output_dir):
             if not line:
                 continue
 
-            label = line.split("/")[1]
-            data = get_data_for(os.path.join(BENCHMARKS_ROOT, line))
+            label = line.split(" ")[1]
+            path = line.split(" ")[0]
+            data = get_data_for(os.path.join(BENCHMARKS_ROOT, path))
 
             row = [
                 data['signal_delay']['mean'],

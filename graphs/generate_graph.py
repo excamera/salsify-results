@@ -3,23 +3,23 @@
 import os
 import sys
 import string
+import math
 
-PLOT_TEMPLATE = '''"{file}" using 3:4 with linespoints ls {i} ps 3 lt rgb "{color}", \\\n"{file}" using 3:4:("{label}") with labels left offset 2.2, char 0 font "Arial:Bold, 28" tc rgb "{color}" notitle'''
+PLOT_TEMPLATE = '''"{file}" using 3:4 with linespoints ls {i} ps 3 lt rgb "{color}", \\\n"{file}" using 3:4:("{label}") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "{color}" notitle'''
 
 
 curdir = os.path.dirname(__file__)
 TEMPLATE_FILE = os.path.join(curdir, 'template.gnu')
 
-COLORS = [
-    "#F26822",
-    "#37A313",
-    "#7E4CB6",
-    "#DF0000",
-    "#1A95C2",
-]
-
-def get_color(i):
-    return COLORS[i % len(COLORS)]
+COLORS = {
+    'Salsify': '#DF0000',
+    'Facetime': '#37A313',
+    'Hangouts': '#7E4CB6',
+    'WebRTC': '#F26822',
+    'Skype': '#1A95C2',
+    'WebRTC-SVC': '#AC4F1F',
+    'Diet-Salsify': '#DF006F'
+}
 
 def usage(argv0):
     print("{argv0} DATA-DIR".format(argv0=argv0))
@@ -27,12 +27,26 @@ def usage(argv0):
 def main(data_dir):
     plot_data = []
 
+    x_min = 100000
+    x_max = 0
+    y_min = 25
+    y_max = 0
+
+
     i = 1
     for f in os.listdir(data_dir):
         if not f.endswith(".dat"): continue
 
+        with open(os.path.join(data_dir, f), "r") as dfin:
+            data = dfin.read().split("\n")[1].split(" ")
+            (x, y) = (float(data[2]), float(data[3]))
+            x_min = min(x, x_min)
+            x_max = max(x, x_max)
+            y_min = min(y, y_min)
+            y_max = max(y, y_max)
+
         label = f.split(".")[0]
-        plot_data += [PLOT_TEMPLATE.format(file=f, i=i, color=get_color(i), label=label)]
+        plot_data += [PLOT_TEMPLATE.format(file=f, i=i, color=COLORS[label], label=label)]
 
         i += 1
 
@@ -43,10 +57,10 @@ def main(data_dir):
 
     with open(os.path.join(data_dir, 'graph.gnu'), "w") as fout:
         s = template.safe_substitute(
-            XMIN=9000,
-            XMAX=500,
-            YMIN=9,
-            YMAX=17,
+            XMIN=(500 * math.ceil(x_max / 500)) + 2000,
+            XMAX=(100 * math.floor(x_min / 100)) - 100,
+            YMIN=math.floor(y_min),
+            YMAX=math.ceil(y_max),
             PLOTDATA=",\\\n".join(plot_data)
         )
 
