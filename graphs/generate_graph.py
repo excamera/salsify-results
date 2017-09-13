@@ -57,7 +57,7 @@ def main(data_dir):
 
     with open(os.path.join(data_dir, 'graph.gnu'), "w") as fout:
         s = template.safe_substitute(
-            XMIN=(500 * math.ceil(x_max / 500)) + 2000,
+            XMIN=(500 * math.ceil(x_max / 500)) + 1990,
             XMAX=(100 * math.floor(x_min / 100)) - 100,
             YMIN=math.floor(y_min),
             YMAX=math.ceil(y_max),
