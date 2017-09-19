@@ -12,14 +12,14 @@ curdir = os.path.dirname(__file__)
 TEMPLATE_FILE = os.path.join(curdir, 'template.gnu')
 
 COLORS = {
-    'Salsify': '#DF0000',
+    'Salsify-4': '#DF0000',
     'Facetime': '#37A313',
     'Hangouts': '#7E4CB6',
     'WebRTC': '#F26822',
     'Skype': '#1A95C2',
     'WebRTC-SVC': '#AC4F1F',
-    'Diet-Salsify': '#DF006F',
-    'Salsify-Zero': '#000000',
+    'Salsify-2': '#DF006F',
+    'Salsify-1': '#333333',
 }
 
 def usage(argv0):
