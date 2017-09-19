@@ -18,7 +18,8 @@ COLORS = {
     'WebRTC': '#F26822',
     'Skype': '#1A95C2',
     'WebRTC-SVC': '#AC4F1F',
-    'Diet-Salsify': '#DF006F'
+    'Diet-Salsify': '#DF006F',
+    'Salsify-Zero': '#000000',
 }
 
 def usage(argv0):
