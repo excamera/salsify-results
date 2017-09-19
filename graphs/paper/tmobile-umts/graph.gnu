@@ -118,7 +118,7 @@ set mcbtics default
 set mrtics default
 set xtics border in scale 1,0.5 nomirror norotate  autojustify
 set xtics  norangelimit
-set xtics (100, 300, 500, 1000, 2000, 3000, 5000)
+set xtics (100, 200, 300, 500, 700, 1000, 2000, 3500, 5000, 7000, 10000, 14000, 18000)
 set ytics border in scale 1,0.5 nomirror norotate  autojustify
 set ytics  norangelimit autofreq
 set ztics border in scale 1,0.5 nomirror norotate  autojustify
@@ -193,16 +193,18 @@ set psdir
 set fit brief errorvariables nocovariancevariables errorscaling prescale nowrap v5
 
 plot "WebRTC-SVC.dat" using 3:4 with linespoints ls 1 ps 3 lt rgb "#AC4F1F", \
-"WebRTC-SVC.dat" using 3:4:("WebRTC-SVC") with labels left offset 3, char 0 font "Arial:Bold, 28" tc rgb "#AC4F1F" notitle,\
+"WebRTC-SVC.dat" using 3:4:("WebRTC-SVC") with labels left offset 2, char 0 font "Arial:Bold, 28" tc rgb "#AC4F1F" notitle,\
 "Skype.dat" using 3:4 with linespoints ls 2 ps 3 lt rgb "#1A95C2", \
 "Skype.dat" using 3:4:("Skype") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "#1A95C2" notitle,\
-"Diet-Salsify.dat" using 3:4 with linespoints ls 3 ps 3 lt rgb "#DF006F", \
-"Diet-Salsify.dat" using 3:4:("Diet-Salsify") with labels center offset -4, char 2 font "Arial:Bold, 28" tc rgb "#DF006F" notitle,\
+"Salsify-4.dat" using 3:4 with linespoints ls 3 ps 3 lt rgb "#DF0000", \
+"Salsify-4.dat" using 3:4:("Salsify-4") with labels center offset -2, char -2 font "Arial:Bold, 28" tc rgb "#DF0000" notitle,\
 "Facetime.dat" using 3:4 with linespoints ls 4 ps 3 lt rgb "#37A313", \
 "Facetime.dat" using 3:4:("Facetime") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "#37A313" notitle,\
 "Hangouts.dat" using 3:4 with linespoints ls 5 ps 3 lt rgb "#7E4CB6", \
 "Hangouts.dat" using 3:4:("Hangouts") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "#7E4CB6" notitle,\
-"Salsify.dat" using 3:4 with linespoints ls 6 ps 3 lt rgb "#DF0000", \
-"Salsify.dat" using 3:4:("Salsify") with labels center offset 0, char -2 font "Arial:Bold, 28" tc rgb "#DF0000" notitle,\
-"WebRTC.dat" using 3:4 with linespoints ls 7 ps 3 lt rgb "#F26822", \
+"Salsify-1.dat" using 3:4 with linespoints ls 6 ps 3 lt rgb "#333333", \
+"Salsify-1.dat" using 3:4:("Salsify-1") with labels center offset 0, char 2.5 font "Arial:Bold, 28" tc rgb "#333333" notitle,\
+"Salsify-2.dat" using 3:4 with linespoints ls 7 ps 3 lt rgb "#DF006F", \
+"Salsify-2.dat" using 3:4:("Salsify-2") with labels right offset -2.5, char 0 font "Arial:Bold, 28" tc rgb "#DF006F" notitle,\
+"WebRTC.dat" using 3:4 with linespoints ls 8 ps 3 lt rgb "#F26822", \
 "WebRTC.dat" using 3:4:("WebRTC") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "#F26822" notitle
