@@ -121,7 +121,7 @@ set xtics  norangelimit
 set xtics (100, 300, 500, 1000, 2000, 3000, 5000)
 set ytics border in scale 1,0.5 nomirror norotate  autojustify
 set ytics  norangelimit autofreq
-set ytics (8,10,12,14,16)
+#set ytics (8,10,12,14,16)
 set ztics border in scale 1,0.5 nomirror norotate  autojustify
 set ztics  norangelimit autofreq
 set xtics font "Arial, 24"
