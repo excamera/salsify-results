@@ -65,8 +65,7 @@ def parse_analysis_file(analysis_file, frames):
         'first_received': None,
         'last_received': None,
         'count_received': 0,
-        'average_ssim': 0,
-        'min_ssim': 65536,
+        'average_ssim': 0,        'min_ssim': 65536,
         'max_ssim': -1,
         'ssims': [],
         'delays': []
@@ -193,12 +192,10 @@ if __name__ == '__main__':
     result.update(parse_downlink_log(sys.argv[3]))
 
     #print()
-    print('{} & {} & {} & & {} & {} & {} \\\\'.format(
+    print('{}  & {} & & {} & {} \\\\'.format(
+        round(float(result['ssim']['p25']),1),
         round(float(result['ssim']['mean']),1),
-        round(float(result['ssim']['p75']),1),
-        round(float(result['ssim']['p95']),1),
-        round(float(result['signal_delay']['median']),1),
-        round(float(result['signal_delay']['p75']),1),
+        round(float(result['signal_delay']['mean']),1),
         round(float(result['signal_delay']['p95'])),1)
-)
+    )
         
