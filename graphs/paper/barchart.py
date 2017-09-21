@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 import os
 
 # parse the data
-#TRACES = ['verizon-lte', 'att-lte', 'tmobile-umts', 'on-off']
-TRACES = ['verizon-lte', 'att-lte', 'on-off']
+TRACES = ['verizon-lte', 'att-lte', 'tmobile-umts', 'on-off']
+#TRACES = ['verizon-lte', 'att-lte', 'on-off']
 DATA = []
 for trace in TRACES:    
     with open(trace+'.list', 'r') as f:
@@ -18,12 +18,12 @@ for trace in TRACES:
 
         with open(dat_filename, 'r') as ff:
             print(dat_filename)
-            #p95_delay, _, _, mean_ssim, _, _ = ff.read().strip().split('\n')[-1].split(' ')
-            _, _, p95_delay, mean_ssim, _, _ = ff.read().strip().split('\n')[-1].split(' ')
+            p95_delay, _, _, mean_ssim, _, _ = ff.read().strip().split('\n')[-1].split(' ')
+            #_, _, p95_delay, mean_ssim, _, _ = ff.read().strip().split('\n')[-1].split(' ')
             p95_delay = float(p95_delay)
             mean_ssim = float(mean_ssim)
 
-            QoE.append(max(-0.001278*p95_delay + 0.062275*mean_ssim + 3.4565, 1))
+            QoE.append(max(-0.000639*p95_delay + 0.062275*mean_ssim + 3.296, 1))
             error.append(0.0000731*p95_delay + 0.02*mean_ssim + 0.307)
 
     DATA.append((QoE, error))
@@ -74,12 +74,12 @@ ax.set_ylabel('Estimated QoE')
 ax.set_xlabel('Network Trace')
 ax.set_title('Predicted QoE Score')
 
-ax.set_xticks([0,1,2,3,4,5])
+ax.set_xticks([1,2,3,4,5])
 ax.set_yticks(ind + 3*width )
 
-#ax.set_yticklabels(('Verizon', 'AT&T', 'T-Mobile', 'Lossy Link'))
-ax.set_yticklabels(('Lossy Link', 'AT&T', 'Verizon'))
-#plt.axis([None, None, 0, 6])
+#ax.set_yticklabels(('Lossy Link', 'AT&T', 'Verizon'))
+ax.set_yticklabels(('Lossy Link', 'T-Mobile', 'AT&T', 'Verizon'))
+plt.axis([0.9, 5, None, None])
 
 # ax.legend((rects1[0], rects2[0], rects3[0], rects4[0], rects5[0], rects6[0], rects7[0]),
 #           ('Salsify-1', 'Salsify-2', 'Facetime', 'Hangouts', 'WebRTC', 'WebRTC-SVC', 'Skype'), ncol=4)
