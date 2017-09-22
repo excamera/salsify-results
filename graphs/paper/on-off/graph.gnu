@@ -157,9 +157,9 @@ set ylabel "video quality (SSIM dB)"
 set ylabel font "Arial, 28" textcolor lt -1 rotate by -270 offset -2, 0
 set y2label ""
 set y2label  font "" textcolor lt -1 rotate by -270
-set xrange [ 3000 : 100 ] noreverse nowriteback
+set xrange [ 3000 : 50 ] noreverse nowriteback
 set yrange [ 8.5 : 18 ] noreverse nowriteback
-set xtics (100, 200, 300, 500, 700, 1000, 2000, 5000, 7000, 9500)
+set xtics (50, 100, 200, 300, 500, 700, 1000, 2000, 5000, 7000, 9500)
 set y2range [ * : * ] noreverse nowriteback
 set zlabel ""
 set zlabel  font "" textcolor lt -1 norotate
@@ -198,7 +198,7 @@ plot "WebRTC-SVC.dat" using 3:4 with linespoints ls 1 ps 3 lt rgb "#AC4F1F", \
 "Skype.dat" using 3:4 with linespoints ls 2 ps 3 lt rgb "#1A95C2", \
 "Skype.dat" using 3:4:("Skype") with labels left offset 3, char 0.25 font "Arial:Bold, 28" tc rgb "#1A95C2" notitle,\
 "Facetime.dat" using 3:4 with linespoints ls 4 ps 3 lt rgb "#37A313", \
-"Facetime.dat" using 3:4:("Facetime") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "#37A313" notitle,\
+"Facetime.dat" using 3:4:("Facetime") with labels center offset -10.5, char 0.25 font "Arial:Bold, 28" tc rgb "#37A313" notitle,\
 "Hangouts.dat" using 3:4 with linespoints ls 5 ps 3 lt rgb "#7E4CB6", \
 "Hangouts.dat" using 3:4:("Hangouts") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "#7E4CB6" notitle,\
 "Salsify-1.dat" using 3:4 with linespoints ls 6 ps 3 lt rgb "#333333", \

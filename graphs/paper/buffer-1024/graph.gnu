@@ -11,7 +11,7 @@
 #    	faq, bugs, etc:   type "help FAQ"
 #    	immediate help:   type "help"  (plot window: hit 'h'
 #set terminal svg enhanced size 800, 650 background rgb 'white'
-set terminal svg enhanced size 800, 650 background rgb 'white'
+set terminal svg enhanced size 1000, 500 background rgb 'white'
 set output 'graph.svg'
 unset clip points
 set clip one
@@ -98,7 +98,7 @@ set cntrparam order 4
 set cntrparam linear
 set cntrparam levels auto 5
 set cntrparam points 5
-#set size ratio 0.83
+#set size ratio 0.5
 set origin 0,0
 set style data points
 set style function lines
@@ -156,7 +156,7 @@ set ylabel "video quality (SSIM dB)"
 set ylabel font "Arial, 28" textcolor lt -1 rotate by -270 offset -2, 0
 set y2label ""
 set y2label  font "" textcolor lt -1 rotate by -270
-set xrange [ 7990 : 600 ] noreverse nowriteback
+set xrange [ 8990 : 600 ] noreverse nowriteback
 set yrange [ 9 : 16 ] noreverse nowriteback
 set xtics (100, 200, 300, 500, 700, 1000, 2000, 5000, 7000, 9500)
 set y2range [ * : * ] noreverse nowriteback
@@ -193,10 +193,10 @@ set psdir
 set fit brief errorvariables nocovariancevariables errorscaling prescale nowrap v5
 
 plot "WebRTC-SVC.dat" using 3:4 with linespoints ls 1 ps 3 lt rgb "#AC4F1F", \
-"WebRTC-SVC.dat" using 3:4:("WebRTC-SVC") with labels center offset 4, char 2 font "Arial:Bold, 28" tc rgb "#AC4F1F" notitle,\
+"WebRTC-SVC.dat" using 3:4:("WebRTC-SVC") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "#AC4F1F" notitle,\
 "Salsify-2.dat" using 3:4 with linespoints ls 2 ps 3 lt rgb "#DF006F", \
-"Salsify-2.dat" using 3:4:("Salsify-2") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "#DF006F" notitle,\
-"Salsify-1.dat" using 3:4 with linespoints ls 3 ps 3 lt rgb "#DF0000", \
-"Salsify-1.dat" using 3:4:("Salsify-1") with labels center offset 0, char -2 font "Arial:Bold, 28" tc rgb "#DF0000" notitle,\
+"Salsify-2.dat" using 3:4:("Salsify-2") with labels left offset -16.5, char 0.25 font "Arial:Bold, 28" tc rgb "#DF006F" notitle,\
+"Salsify-1.dat" using 3:4 with linespoints ls 3 ps 3 lt rgb "#333333", \
+"Salsify-1.dat" using 3:4:("Salsify-1") with labels center offset 10, char 0.25 font "Arial:Bold, 28" tc rgb "#333333" notitle,\
 "WebRTC.dat" using 3:4 with linespoints ls 4 ps 3 lt rgb "#F26822", \
 "WebRTC.dat" using 3:4:("WebRTC") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "#F26822" notitle
