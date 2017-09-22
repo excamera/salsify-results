@@ -1,12 +1,12 @@
 #!/bin/bash
 
 LIST=(
-    Verizon-LTE-driving/salsify-1
-    Verizon-LTE-driving/salsify2
+    Verizon-LTE-driving/salsify-1-256.2017-09-19
+    Verizon-LTE-driving/salsify-2-256-2017-09-02
     Verizon-LTE-driving/facetime
-    Verizon-LTE-driving/hangouts
-    Verizon-LTE-driving/apprtc-rerun-2017-09-07
-    Verizon-LTE-driving/apprtc-svc-2s-3t
+    Verizon-LTE-driving/hangouts-256.2017-09-08
+    Verizon-LTE-driving/apprtc-256.2017-09-07
+    Verizon-LTE-driving/apprtc-svc-2s-3t-256.2017-09-05
     Verizon-LTE-driving/skype
     ATT-LTE-driving/salsify-1
     ATT-LTE-driving/salsify2
@@ -22,12 +22,12 @@ LIST=(
     TMobile-UMTS-driving/apprtc
     TMobile-UMTS-driving/apprtc-svc-2s-3t
     TMobile-UMTS-driving/skype
-    12mbps/salsify-1
-    12mbps/salsify-2
+    12mbps/salsify-1-onoff.2017-09-21
+    12mbps/salsify-2-onoff.2017-09-21
     12mbps/facetime-on-off
     12mbps/hangouts-on-off
-    12mbps/apprtc-rerun-2017-09-07-onoff
-    12mbps/apprtc-svc-2s-3t-onoff
+    12mbps/apprtc-onoff.2017-09-21.1
+    12mbps/apprtc-svc-2s-3t-onoff.2017-09-21
     12mbps/skype-on-off    
 )
 
