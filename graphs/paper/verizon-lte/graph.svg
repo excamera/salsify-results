@@ -164,7 +164,7 @@
 	</g>
 </g>
 	</g>
-	<g id="gnuplot_plot_5" ><title>"Diet-Salsify.dat" using 3:4</title>
+	<g id="gnuplot_plot_5" ><title>"Salsify-2.dat" using 3:4</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='rgb(223,   0, 111)'  d='M674.0,43.3  '/>	<use xlink:href='#gpPt6' transform='translate(674.0,43.3) scale(13.50)' color='rgb(223,   0, 111)'/>
 </g>
@@ -200,7 +200,7 @@
 	</g>
 </g>
 	</g>
-	<g id="gnuplot_plot_11" ><title>"Salsify-Zero.dat" using 3:4</title>
+	<g id="gnuplot_plot_11" ><title>"Salsify-1.dat" using 3:4</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='rgb(  0,   0,   0)'  d='M840.9,47.9  '/>	<use xlink:href='#gpPt6' transform='translate(840.9,47.9) scale(13.50)' color='rgb(  0,   0,   0)'/>
 </g>

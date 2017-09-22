@@ -194,11 +194,11 @@ set fit brief errorvariables nocovariancevariables errorscaling prescale nowrap 
 
 plot "WebRTC-SVC.dat" using 3:4 with linespoints ls 1 ps 3 lt rgb "#AC4F1F", \
 "WebRTC-SVC.dat" using 3:4:("WebRTC-SVC") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "#AC4F1F" notitle,\
-"Diet-Salsify.dat" using 3:4 with linespoints ls 2 ps 3 lt rgb "#DF006F", \
-"Diet-Salsify.dat" using 3:4:("Diet-Salsify") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "#DF006F" notitle,\
+"Salsify-2.dat" using 3:4 with linespoints ls 2 ps 3 lt rgb "#DF006F", \
+"Salsify-2.dat" using 3:4:("Salsify-2") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "#DF006F" notitle,\
 "Hangouts.dat" using 3:4 with linespoints ls 3 ps 3 lt rgb "#7E4CB6", \
 "Hangouts.dat" using 3:4:("Hangouts") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "#7E4CB6" notitle,\
-"Salsify.dat" using 3:4 with linespoints ls 4 ps 3 lt rgb "#DF0000", \
-"Salsify.dat" using 3:4:("Salsify") with labels center offset 0, char -2 font "Arial:Bold, 28" tc rgb "#DF0000" notitle,\
+"Salsify-1.dat" using 3:4 with linespoints ls 4 ps 3 lt rgb "#DF0000", \
+"Salsify-1.dat" using 3:4:("Salsify-1") with labels center offset 0, char -2 font "Arial:Bold, 28" tc rgb "#DF0000" notitle,\
 "WebRTC.dat" using 3:4 with linespoints ls 5 ps 3 lt rgb "#F26822", \
 "WebRTC.dat" using 3:4:("WebRTC") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "#F26822" notitle

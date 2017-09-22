@@ -1,4 +1,5 @@
-Verizon-LTE-driving/apprtc-svc-2s-3t-buffersize-1024/video3_720p60 WebRTC-SVC
-Verizon-LTE-driving/apprtc-buffersize-1024/video3_720p60 WebRTC
-Verizon-LTE-driving/salsify4-1024/video3_720p60 Salsify-4
-Verizon-LTE-driving/salsify2-1024/video3_720p60 Salsify-2
+Verizon-LTE-driving/apprtc-1024.2017-09-21/video3_720p60 WebRTC-SVC
+Verizon-LTE-driving/apprtc-svc-2s-3t-1024.2017-09-21/video3_720p60 WebRTC
+Verizon-LTE-driving/hangouts-1024.2017-09-21/video3_720p60 WebRTC
+Verizon-LTE-driving/salsify-2-1024.2017-09-21/video3_720p60 Salsify-2
+Verizon-LTE-driving/salsify-1-1024.2017-09-21/video3_720p60 Salsify-1
