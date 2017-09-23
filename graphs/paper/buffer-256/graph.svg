@@ -114,7 +114,7 @@
 	<path stroke='black'  d='M83.0,16.7 L83.0,419.0 L966.0,419.0 M966.0,16.7 M83.0,16.7  '/></g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(26.4,217.9) rotate(270)" stroke="none" fill="black" font-family="Arial" font-size="28.00"  text-anchor="middle">
-		<text><tspan font-family="Arial" >video quality (SSIM dB)</tspan></text>
+		<text><tspan font-family="Arial" >Video Quality (SSIM dB)</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -124,7 +124,7 @@
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(524.5,485.3)" stroke="none" fill="black" font-family="Arial" font-size="28.00"  text-anchor="middle">
-		<text><tspan font-family="Arial" >video delay (95th percentile ms)</tspan></text>
+		<text><tspan font-family="Arial" >Video Delay (95th percentile ms)</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -147,8 +147,8 @@
 	</g>
 	<g id="gnuplot_plot_2" ><title>gnuplot_plot_2</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(248.6,102.6)" stroke="none" fill="rgb(172,79,31)" font-family="Arial:Bold" font-size="28.00"  text-anchor="middle">
-		<text><tspan font-family="Arial"  font-weight="bold" >WebRTC-SVC</tspan></text>
+	<g transform="translate(265.2,102.6)" stroke="none" fill="rgb(172,79,31)" font-family="Arial:Bold" font-size="28.00"  text-anchor="middle">
+		<text><tspan font-family="Arial"  font-weight="bold" >WebRTC (VP9-SVC)</tspan></text>
 	</g>
 </g>
 	</g>
@@ -160,7 +160,7 @@
 	<g id="gnuplot_plot_4" ><title>gnuplot_plot_4</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(724.8,86.0)" stroke="none" fill="rgb(223,0,111)" font-family="Arial:Bold" font-size="28.00"  text-anchor="middle">
-		<text><tspan font-family="Arial"  font-weight="bold" >Salsify-2</tspan></text>
+		<text><tspan font-family="Arial"  font-weight="bold" >Salsify-2c</tspan></text>
 	</g>
 </g>
 	</g>
@@ -184,7 +184,7 @@
 	<g id="gnuplot_plot_8" ><title>gnuplot_plot_8</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(923.2,89.9)" stroke="none" fill="rgb(51,51,51)" font-family="Arial:Bold" font-size="28.00"  text-anchor="middle">
-		<text><tspan font-family="Arial"  font-weight="bold" >Salsify-1</tspan></text>
+		<text><tspan font-family="Arial"  font-weight="bold" >Salsify-1c</tspan></text>
 	</g>
 </g>
 	</g>

@@ -12,7 +12,7 @@
 #    	immediate help:   type "help"  (plot window: hit 'h'
 #set terminal svg enhanced size 800, 650 background rgb 'white'
 set terminal svg enhanced size 1000, 500 background rgb 'white'
-set output 'graph.pdf'
+set output 'graph.svg'
 unset clip points
 set clip one
 unset clip two
@@ -148,12 +148,12 @@ set rrange [ * : * ] noreverse nowriteback
 set trange [ * : * ] noreverse nowriteback
 set urange [ * : * ] noreverse nowriteback
 set vrange [ * : * ] noreverse nowriteback
-set xlabel "video delay (95th percentile ms)"
+set xlabel "Video Delay (95th percentile ms)"
 set xlabel  font "Arial, 28" textcolor lt -1 norotate  offset 0, -0.6
 set x2label ""
 set x2label  font "" textcolor lt -1 norotate
 set x2range [ * : * ] noreverse nowriteback
-set ylabel "video quality (SSIM dB)"
+set ylabel "Video Quality (SSIM dB)"
 set ylabel font "Arial, 28" textcolor lt -1 rotate by -270 offset -2, 0
 set y2label ""
 set y2label  font "" textcolor lt -1 rotate by -270
@@ -194,7 +194,7 @@ set psdir
 set fit brief errorvariables nocovariancevariables errorscaling prescale nowrap v5
 
 plot "WebRTC-SVC.dat" using 3:4 with linespoints ls 1 ps 3 lt rgb "#AC4F1F", \
-"WebRTC-SVC.dat" using 3:4:("WebRTC-SVC") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "#AC4F1F" notitle,\
+"WebRTC-SVC.dat" using 3:4:("WebRTC (VP9-SVC)") with labels center offset 2, char 2 font "Arial:Bold, 28" tc rgb "#AC4F1F" notitle,\
 "Skype.dat" using 3:4 with linespoints ls 2 ps 3 lt rgb "#1A95C2", \
 "Skype.dat" using 3:4:("Skype") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "#1A95C2" notitle,\
 "Facetime.dat" using 3:4 with linespoints ls 4 ps 3 lt rgb "#37A313", \
@@ -202,9 +202,9 @@ plot "WebRTC-SVC.dat" using 3:4 with linespoints ls 1 ps 3 lt rgb "#AC4F1F", \
 "Hangouts.dat" using 3:4 with linespoints ls 5 ps 3 lt rgb "#7E4CB6", \
 "Hangouts.dat" using 3:4:("Hangouts") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "#7E4CB6" notitle,\
 "Salsify-1.dat" using 3:4 with linespoints ls 6 ps 3 lt rgb "#333333", \
-"Salsify-1.dat" using 3:4:("Salsify-1") with labels right offset -2, char 0 font "Arial:Bold, 28" tc rgb "#333333" notitle,\
+"Salsify-1.dat" using 3:4:("Salsify-1c") with labels right offset -3, char 0 font "Arial:Bold, 28" tc rgb "#333333" notitle,\
 "Salsify-2.dat" using 3:4 with linespoints ls 7 ps 3 lt rgb "#DF006F", \
-"Salsify-2.dat" using 3:4:("Salsify-2") with labels left offset 2, char 0 font "Arial:Bold, 28" tc rgb "#DF006F" notitle,\
+"Salsify-2.dat" using 3:4:("Salsify-2c") with labels left offset 3, char 0 font "Arial:Bold, 28" tc rgb "#DF006F" notitle,\
 "WebRTC.dat" using 3:4 with linespoints ls 8 ps 3 lt rgb "#F26822", \
 "WebRTC.dat" using 3:4:("WebRTC") with labels center offset 0, char -2 font "Arial:Bold, 28" tc rgb "#F26822" notitle
 
