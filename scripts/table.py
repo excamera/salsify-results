@@ -192,6 +192,8 @@ if __name__ == '__main__':
     result.update(parse_downlink_log(sys.argv[3]))
 
     #print()
+    import json
+    print(json.dumps(result, indent=4, sort_keys=True))
     print('{}  & {} & & {} & {} \\\\'.format(
         round(float(result['ssim']['p25']),1),
         round(float(result['ssim']['mean']),1),
