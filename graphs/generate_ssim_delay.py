@@ -7,7 +7,7 @@ import math
 import numpy as np
 
 def usage(argv0):
-    print("{argv0} PLAYBACK-LOG ANALYSIS-LOG".format(argv0=argv0))
+    print("{argv0} PLAYBACK-LOG ANALYSIS-LOG BASE-TIMESTAMP".format(argv0=argv0))
 
 INVARIANT_DELAY = 66733 # us
 
@@ -42,7 +42,7 @@ def parse_playback_file(playback_file):
             assert data[1] == data[2], "UL and LR barcodes don't match for frame {}".format(i)
 
             frames += [{
-                'sent': data[7]
+                'sent': data[4]
             }]
 
             i += 1
@@ -76,22 +76,41 @@ def parse_analysis_file(analysis_file, frames):
             assert data[5] > data[4], "send time is before receive time for frame {}".format(i)
             assert (data[5] - data[4]) == data[6], "delay value is wrong for frame {}".format(i)
 
-            frames[i]['received'] = data[5]
+            frames[i]['received'] = data[2]
             frames[i]['ssim'] = data[8]
             frames[i]['delay'] = frames[i]['received'] - frames[i]['sent'] - INVARIANT_DELAY
 
     print("> reading analysis file done successfully.", file=sys.stderr)
 
 if __name__ == '__main__':
-    if len(sys.argv) != 3:
+    if len(sys.argv) != 4:
         usage(sys.argv[0])
         sys.exit(1)
 
     frames = parse_playback_file(sys.argv[1])
     parse_analysis_file(sys.argv[2], frames)
+    base_timestamp = sys.argv[3]
 
-    earliest = min([frame.get('sent') for frame in frames if frame.get('received')])
+    earliest = min([frame.get('sent') for frame in frames])
+
+    print("# base timestamp: {timestamp}".format(timestamp=base_timestamp))
 
     for frame in frames:
+        if not frame.get('received'): continue
+        print("{:.3f} {:.3f} {}".format((frame['sent'] // 1000 - int(base_timestamp))/1000, (frame['received'] // 1000 - int(base_timestamp))/1000, frame['ssim']))
+
+    sys.exit(0)
+
+    v = []
+    for frame in frames:
+        print("{timestamp} + {size}".format(
+            timestamp=frame['sent'] // 1000,
+            size=1
+        ))
+
         if frame.get('received'):
-            print((frame['received'] - earliest) / 1e6, frame['delay'] / 1e3, frame['ssim'], sep='\t')
+            print("{timestamp} - {size} {delay}".format(
+                timestamp=(frame['received'] // 1000),
+                size=1,
+                delay=(frame['received'] - frame['sent']) // 1000
+            ))
