@@ -145,12 +145,12 @@ set rrange [ * : * ] noreverse nowriteback
 set trange [ * : * ] noreverse nowriteback
 set urange [ * : * ] noreverse nowriteback
 set vrange [ * : * ] noreverse nowriteback
-set xlabel "received time (s)"
+set xlabel "Display Time (s)"
 set xlabel  font "Arial, 28" textcolor lt -1 norotate  offset 0, -0.6
 set x2label ""
 set x2label  font "" textcolor lt -1 norotate
 set x2range [ * : * ] noreverse nowriteback
-set ylabel "frame quality (SSIM dB)"
+set ylabel "Frame Quality (SSIM dB)"
 set ylabel font "Arial, 28" textcolor lt -1 rotate by -270 offset -2, 0
 set y2label ""
 set y2label  font "" textcolor lt -1 rotate by -270
@@ -188,13 +188,17 @@ set loadpath
 set fontpath
 set psdir
 set fit brief errorvariables nocovariancevariables errorscaling prescale nowrap v5
+set xtics 1
 
 set style rect fc rgb "#FFBABA" fs pattern 1 noborder
 set obj rect from 0, graph 0 to 1, graph 1
 
 set label "Salsify-2c" at first -2.75, first 13.75 font "Arial:Bold, 27" tc rgb "#44DF006F"
-set label "WebRTC" at first -2.75, first 11 font "Arial:Bold, 27" tc rgb "#440000a0"
-set label "outage" at first 0.5, first 10.5 rotate center font "Arial:Bold, 35" tc rgb "#FF9999"
+set label "WebRTC" at first -2.75, first 10.75 font "Arial:Bold, 27" tc rgb "#440000a0"
+set label "outage" at first 0.5, first 12 rotate center font "Arial:Bold, 37" tc rgb "#FF9999"
+#set label "WebRTC" at first -2.75, first 11 font "Arial:Bold, 27" tc rgb "#440000a0"
 
-plot "WebRTC.dat" using ($2-150):3 with points ls 1 lt rgb "#440000a0",\
-     "Salsify.dat" using ($2-150):3 with points ls 1 lt rgb "#44DF006F"
+plot \
+     "WebRTC-new.dat" using ($2-150):3 with points ls 1 lt rgb "#440000a0",\
+     "Salsify.dat" using ($2-150):3 with points ls 1 lt rgb "#44DF006F",\
+     #"WebRTC.dat" using ($2-150):3 with points ls 1 lt rgb "#440000a0",\

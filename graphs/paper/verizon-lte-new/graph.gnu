@@ -157,9 +157,9 @@ set ylabel "Video Quality (SSIM dB)"
 set ylabel font "Arial, 28" textcolor lt -1 rotate by -270 offset -2, 0
 set y2label ""
 set y2label  font "" textcolor lt -1 rotate by -270
-set xrange [ 4300 : 100 ] noreverse nowriteback
-set yrange [ 8.5 : 18 ] noreverse nowriteback
-set xtics (50, 100, 200, 300, 500, 1000, 2000, 4000, 7000, 9500)
+set xrange [ 9400 : 500 ] noreverse nowriteback
+set yrange [ 7 : 18 ] noreverse nowriteback
+set xtics (100, 200, 300, 500, 700, 1000, 2000, 5000, 7000, 9500)
 set y2range [ * : * ] noreverse nowriteback
 set zlabel ""
 set zlabel  font "" textcolor lt -1 norotate
@@ -194,19 +194,25 @@ set psdir
 set fit brief errorvariables nocovariancevariables errorscaling prescale nowrap v5
 
 plot "WebRTC-SVC.dat" using 3:4 with linespoints ls 1 ps 3 lt rgb "#AC4F1F", \
-"WebRTC-SVC.dat" using 3:4:("WebRTC (VP9-SVC)") with labels left offset -1.5, char -2 font "Arial:Bold, 28" tc rgb "#AC4F1F" notitle,\
+"WebRTC-SVC.dat" using 3:4:("WebRTC (VP9-SVC)") with labels left offset -1.8, char 2 font "Arial:Bold, 28" tc rgb "#AC4F1F" notitle,\
 "Skype.dat" using 3:4 with linespoints ls 2 ps 3 lt rgb "#1A95C2", \
-"Skype.dat" using 3:4:("Skype") with labels center offset 0, char -2 font "Arial:Bold, 28" tc rgb "#1A95C2" notitle,\
+"Skype.dat" using 3:4:("Skype") with labels center offset -3.5, char 2 font "Arial:Bold, 28" tc rgb "#1A95C2" notitle,\
+"Salsify-2.dat" using 3:4 with linespoints ls 3 ps 3 lt rgb "#DF006F", \
+"Salsify-2.dat" using 3:4:("Salsify-2c") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "#DF006F" notitle,\
 "Facetime.dat" using 3:4 with linespoints ls 4 ps 3 lt rgb "#37A313", \
-"Facetime.dat" using 3:4:("FaceTime") with labels right offset -3, char 0 font "Arial:Bold, 28" tc rgb "#37A313" notitle,\
+"Facetime.dat" using 3:4:("FaceTime") with labels right offset 18, char 0 font "Arial:Bold, 28" tc rgb "#37A313" notitle,\
 "Hangouts.dat" using 3:4 with linespoints ls 5 ps 3 lt rgb "#7E4CB6", \
 "Hangouts.dat" using 3:4:("Hangouts") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "#7E4CB6" notitle,\
-"Salsify-1.dat" using 3:4 with linespoints ls 6 ps 3 lt rgb "#333333", \
-"Salsify-1.dat" using 3:4:("Salsify-1c") with labels left offset -1.5, char 1.75 font "Arial:Bold, 28" tc rgb "#333333" notitle,\
-"Salsify-2.dat" using 3:4 with linespoints ls 7 ps 3 lt rgb "#DF006F", \
-"Salsify-2.dat" using 3:4:("Salsify-2c") with labels left offset -18.5, char 0 font "Arial:Bold, 28" tc rgb "#DF006F" notitle,\
+"Salsify-1.dat" using 3:4 with linespoints ls 7 ps 3 lt rgb "#000000", \
+"Salsify-1.dat" using 3:4:("Salsify-1c") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "#000000" notitle,\
 "WebRTC.dat" using 3:4 with linespoints ls 8 ps 3 lt rgb "#F26822", \
-"WebRTC.dat" using 3:4:("WebRTC") with labels left offset 3, char 0 font "Arial:Bold, 28" tc rgb "#F26822" notitle
+"WebRTC.dat" using 3:4:("WebRTC") with labels left offset 3, char 0 font "Arial:Bold, 28" tc rgb "#F26822" notitle, \
+"Salsify-nograce.dat" using 3:4 with linespoints ls 6 ps 3 lt rgb "#7f7f7f", \
+"Salsify-nograce.dat" using 3:4:("Salsify (no grace period)") with labels center offset -22, char 0 font "Arial:Bold, 28" tc rgb "#7f7f7f" notitle,\
+"New.dat" using 3:4 with linespoints ls 6 ps 3 lt rgb "#3f3f3f", \
+"New.dat" using 3:4:("Conventional Codec") with labels center offset 0, char -2 font "Arial:Bold, 28" tc rgb "#3f3f3f" notitle
+#"Salsify-targetsize.dat" using 3:4 with linespoints ls 6 ps 3 lt rgb "#7f7f7f", \
+#"Salsify-targetsize.dat" using 3:4:("Salsify (conventional codec)") with labels center offset 5, char 2 font "Arial:Bold, 28" tc rgb "#7f7f7f" notitle,\
 
-#"Salsify-4.dat" using 3:4 with linespoints ls 3 ps 3 lt rgb "#DF0000", \
-#"Salsify-4.dat" using 3:4:("Salsify-4") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "#DF0000" notitle,\
+#"Salsify.dat" using 3:4 with linespoints ls 6 ps 3 lt rgb "#DF0000", \
+#"Salsify.dat" using 3:4:("Salsify") with labels center offset 0, char -2 font "Arial:Bold, 28" tc rgb "#DF0000" notitle,\

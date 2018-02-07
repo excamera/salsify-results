@@ -54,12 +54,12 @@ set style increment default
 unset style line
 
 # Please change the colors...
-set style line 1 linewidth 1.000 dashtype solid pointtype 7 pointsize default pointinterval 0
-set style line 2 linewidth 1.000 dashtype solid pointtype 7 pointsize default pointinterval 0
-set style line 3 linewidth 1.000 dashtype solid pointtype 7 pointsize default pointinterval 0
+set style line 1 linewidth 1.000 dashtype solid pointtype 1 pointsize default pointinterval 0
+set style line 2 linewidth 1.000 dashtype solid pointtype 2 pointsize default pointinterval 0
+set style line 3 linewidth 1.000 dashtype solid pointtype 13 pointsize default pointinterval 0
 set style line 4 linewidth 1.000 dashtype solid pointtype 7 pointsize default pointinterval 0
-set style line 5 linewidth 1.000 dashtype solid pointtype 7 pointsize default pointinterval 0
-set style line 6 linewidth 1.000 dashtype solid pointtype 7 pointsize default pointinterval 0
+set style line 5 linewidth 1.000 dashtype solid pointtype 26 pointsize default pointinterval 0
+set style line 6 linewidth 1.000 dashtype solid pointtype 4 pointsize default pointinterval 0
 set style line 7 linewidth 1.000 dashtype solid pointtype 7 pointsize default pointinterval 0
 set style line 8 linewidth 1.000 dashtype solid pointtype 7 pointsize default pointinterval 0
 set style line 9 linewidth 1.000 dashtype solid pointtype 7 pointsize default pointinterval 0
@@ -193,26 +193,28 @@ set fontpath
 set psdir
 set fit brief errorvariables nocovariancevariables errorscaling prescale nowrap v5
 
-plot "WebRTC-timelapse.dat" using 1:2 with lines ls 8 lt rgb "#66F26822",\
-"WebRTC.dat" using 1:2 with linespoints ls 8 ps 3 lt rgb "#FFFFFF", \
+plot \
+"Salsify-2-timelapse.dat" using 1:2 with points ls 2 lw 1 ps 0.75 lt rgb "#bbDF006F",\
+"Facetime-timelapse.dat" using 1:2 with points ls 3 lw 2 ps 0.5 lt rgb "#bb37A313",\
+"Hangouts-timelapse.dat" using 1:2 with points ls 6 lw 2 ps 0.5 lt rgb "#bb7E4CB6",\
+"WebRTC-timelapse.dat" using 1:2 with points ls 5 lw 2 ps 0.75 lt rgb "#bbF26822",\
+"Skype-timelapse.dat" using 1:2 with points ls 1 lw 2 ps 0.75 lt rgb "#bb1A95C2",\
+"WebRTC.dat" using 1:2 with linespoints ls 8 ps 3.5 lt rgb "#FFFFFF", \
 "WebRTC.dat" using 1:2 with linespoints ls 8 ps 2.5 lt rgb "#F26822", \
+"Salsify-2.dat" using 1:2 with linespoints ls 8 ps 3.5 lt rgb "#FFFFFF",\
+"Salsify-2.dat" using 1:2 with linespoints ls 8 ps 2.5 lt rgb "#DF006F",\
+"Facetime.dat" using 1:2 with linespoints ls 8 ps 3.5 lt rgb "#FFFFFF", \
+"Facetime.dat" using 1:2 with linespoints ls 8 ps 2.5 lt rgb "#37A313", \
+"Skype.dat" using 1:2 with linespoints ls 8 ps 3.5 lt rgb "#FFFFFF", \
+"Skype.dat" using 1:2 with linespoints ls 8 ps 2.5 lt rgb "#1A95C2", \
+"Hangouts.dat" using 1:2 with linespoints ls 8 ps 3.5 lt rgb "#FFFFFF", \
+"Hangouts.dat" using 1:2 with linespoints ls 8 ps 2.5 lt rgb "#7E4CB6", \
 "WebRTC.dat" using 1:2:("WebRTC") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "#F26822" notitle,\
-"Salsify-2.dat" using 1:2:("Salsify-2c") with labels right offset -2, char 1.5 font "Arial:Bold, 28" tc rgb "#DF006F" notitle,\
-"Salsify-2-timelapse.dat" using 1:2 with lines ls 8 lt rgb "#66DF006F",\
-"Salsify-2.dat" using 1:2 with linespoints ls 7 ps 3 lt rgb "#FFFFFF",\
-"Salsify-2.dat" using 1:2 with linespoints ls 7 ps 2.5 lt rgb "#DF006F",\
-"Facetime-timelapse.dat" using 1:2 with lines ls 8 lt rgb "#6637A313",\
-"Facetime.dat" using 1:2 with linespoints ls 4 ps 3 lt rgb "#FFFFFF", \
-"Facetime.dat" using 1:2 with linespoints ls 4 ps 2.5 lt rgb "#37A313", \
-"Skype-timelapse.dat" using 1:2 with lines ls 8 lt rgb "#661A95C2",\
-"Skype.dat" using 1:2 with linespoints ls 4 ps 3 lt rgb "#FFFFFF", \
-"Skype.dat" using 1:2 with linespoints ls 4 ps 2.5 lt rgb "#1A95C2", \
-"Skype.dat" using 1:2:("Skype") with labels center offset 0, char -2.5 font "Arial:Bold, 28" tc rgb "#1A95C2" notitle,\
+"Salsify-2.dat" using 1:2:("Salsify-2c") with labels right offset -2.9, char 1.5 font "Arial:Bold, 26" tc rgb "#DF006F" notitle,\
+"Skype.dat" using 1:2:("Skype") with labels center offset 0, char 2.95 font "Arial:Bold, 28" tc rgb "#1A95C2" notitle,\
 "Hangouts.dat" using 1:2:("Hangouts") with labels center offset 0, char -2 font "Arial:Bold, 28" tc rgb "#7E4CB6" notitle,\
-"Hangouts-timelapse.dat" using 1:2 with lines ls 8 lt rgb "#667E4CB6",\
-"Hangouts.dat" using 1:2 with linespoints ls 4 ps 3 lt rgb "#FFFFFF", \
-"Hangouts.dat" using 1:2 with linespoints ls 4 ps 2.5 lt rgb "#7E4CB6", \
-"Facetime.dat" using 1:2:("FaceTime") with labels center offset 0, char -2.1 font "Arial:Bold, 28" tc rgb "#37A313" notitle,\
+"Facetime.dat" using 1:2:("FaceTime") with labels right offset -2.5, char -1.5 font "Arial:Bold, 26" tc rgb "#37A313" notitle,\
+
 #"WebRTC-SVC.dat" using 3:4 with linespoints ls 1 ps 3 lt rgb "#AC4F1F", \
 #"WebRTC-SVC.dat" using 3:4:("WebRTC (VP9-SVC)") with labels center offset 2, char 2 font "Arial:Bold, 28" tc rgb "#AC4F1F" notitle,\
 #"Skype.dat" using 3:4 with linespoints ls 2 ps 3 lt rgb "#1A95C2", \
