@@ -13,8 +13,9 @@ TEMPLATE_FILE = os.path.join(curdir, 'template.gnu')
 
 COLORS = {
     'Salsify-4': '#DF0000',
-    'Facetime': '#37A313',
     'Hangouts': '#7E4CB6',
+    'Facetime': '#37A313',
+    'FaceTime': '#37A313',
     'WebRTC': '#F26822',
     'Skype': '#1A95C2',
     'WebRTC-SVC': '#AC4F1F',
