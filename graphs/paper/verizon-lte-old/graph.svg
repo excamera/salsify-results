@@ -212,7 +212,7 @@
 	</g>
 	<g id="gnuplot_plot_14" ><title>gnuplot_plot_14</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(321.5,184.4)" stroke="none" fill="rgb(242,104,34)" font-family="Arial:Bold" font-size="28.00"  text-anchor="start">
+	<g transform="translate(296.6,220.4)" stroke="none" fill="rgb(242,104,34)" font-family="Arial:Bold" font-size="28.00"  text-anchor="middle">
 		<text><tspan font-family="Arial"  font-weight="bold" >WebRTC</tspan></text>
 	</g>
 </g>
@@ -229,27 +229,12 @@
 	</g>
 </g>
 	</g>
-	<g id="gnuplot_plot_17" ><title>"New.dat" using 3:4</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(127, 127, 127)'  d='M337.1,228.0  '/>	<use xlink:href='#gpPt6' transform='translate(337.1,228.0) scale(13.50)' color='rgb(127, 127, 127)'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_18" ><title>gnuplot_plot_18</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(337.1,273.1)" stroke="none" fill="rgb(127,127,127)" font-family="Arial:Bold" font-size="28.00"  text-anchor="middle">
-		<text><tspan font-family="Arial"  font-weight="bold" >Salsify (conventional</tspan></text>
-	</g>
-	<g transform="translate(337.1,315.1)" stroke="none" fill="rgb(127,127,127)" font-family="Arial:Bold" font-size="28.00"  text-anchor="middle">
-		<text><tspan font-family="Arial"  font-weight="bold" >transport and codec)</tspan></text>
-	</g>
-</g>
-	</g>
-	<g id="gnuplot_plot_19" ><title>"Salsify-targetsize.dat" using 3:4</title>
+	<g id="gnuplot_plot_17" ><title>"Salsify-targetsize.dat" using 3:4</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='rgb(127, 127, 127)'  d='M747.1,258.3  '/>	<use xlink:href='#gpPt6' transform='translate(747.1,258.3) scale(13.50)' color='rgb(127, 127, 127)'/>
 </g>
 	</g>
-	<g id="gnuplot_plot_20" ><title>gnuplot_plot_20</title>
+	<g id="gnuplot_plot_18" ><title>gnuplot_plot_18</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(788.6,231.4)" stroke="none" fill="rgb(127,127,127)" font-family="Arial:Bold" font-size="28.00"  text-anchor="middle">
 		<text><tspan font-family="Arial"  font-weight="bold" >Salsify (conventional codec)</tspan></text>

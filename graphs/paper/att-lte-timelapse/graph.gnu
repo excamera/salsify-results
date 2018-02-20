@@ -194,13 +194,13 @@ set psdir
 set fit brief errorvariables nocovariancevariables errorscaling prescale nowrap v5
 
 plot \
+"WebRTC-timelapse.dat" using 1:2 with points ls 5 lw 2 ps 0.75 lt rgb "#bb0000a0",\
 "Salsify-2-timelapse.dat" using 1:2 with points ls 2 lw 1 ps 0.75 lt rgb "#bbDF006F",\
 "Facetime-timelapse.dat" using 1:2 with points ls 3 lw 2 ps 0.5 lt rgb "#bb37A313",\
 "Hangouts-timelapse.dat" using 1:2 with points ls 6 lw 2 ps 0.5 lt rgb "#bb7E4CB6",\
-"WebRTC-timelapse.dat" using 1:2 with points ls 5 lw 2 ps 0.75 lt rgb "#bbF26822",\
 "Skype-timelapse.dat" using 1:2 with points ls 1 lw 2 ps 0.75 lt rgb "#bb1A95C2",\
 "WebRTC.dat" using 1:2 with linespoints ls 8 ps 3.5 lt rgb "#FFFFFF", \
-"WebRTC.dat" using 1:2 with linespoints ls 8 ps 2.5 lt rgb "#F26822", \
+"WebRTC.dat" using 1:2 with linespoints ls 8 ps 2.5 lt rgb "#0000a0", \
 "Salsify-2.dat" using 1:2 with linespoints ls 8 ps 3.5 lt rgb "#FFFFFF",\
 "Salsify-2.dat" using 1:2 with linespoints ls 8 ps 2.5 lt rgb "#DF006F",\
 "Facetime.dat" using 1:2 with linespoints ls 8 ps 3.5 lt rgb "#FFFFFF", \
@@ -209,7 +209,7 @@ plot \
 "Skype.dat" using 1:2 with linespoints ls 8 ps 2.5 lt rgb "#1A95C2", \
 "Hangouts.dat" using 1:2 with linespoints ls 8 ps 3.5 lt rgb "#FFFFFF", \
 "Hangouts.dat" using 1:2 with linespoints ls 8 ps 2.5 lt rgb "#7E4CB6", \
-"WebRTC.dat" using 1:2:("WebRTC") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "#F26822" notitle,\
+"WebRTC.dat" using 1:2:("WebRTC") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "#0000a0" notitle,\
 "Salsify-2.dat" using 1:2:("Salsify-2c") with labels right offset -2.9, char 1.5 font "Arial:Bold, 26" tc rgb "#DF006F" notitle,\
 "Skype.dat" using 1:2:("Skype") with labels center offset 0, char 2.95 font "Arial:Bold, 28" tc rgb "#1A95C2" notitle,\
 "Hangouts.dat" using 1:2:("Hangouts") with labels center offset 0, char -2 font "Arial:Bold, 28" tc rgb "#7E4CB6" notitle,\

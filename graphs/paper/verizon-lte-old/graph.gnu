@@ -206,13 +206,11 @@ plot "WebRTC-SVC.dat" using 3:4 with linespoints ls 1 ps 3 lt rgb "#AC4F1F", \
 "Salsify-1.dat" using 3:4 with linespoints ls 7 ps 3 lt rgb "#000000", \
 "Salsify-1.dat" using 3:4:("Salsify-1c") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "#000000" notitle,\
 "WebRTC.dat" using 3:4 with linespoints ls 8 ps 3 lt rgb "#F26822", \
-"WebRTC.dat" using 3:4:("WebRTC") with labels left offset 3, char 0 font "Arial:Bold, 28" tc rgb "#F26822" notitle, \
+"WebRTC.dat" using 3:4:("WebRTC") with labels center offset 0, char -2 font "Arial:Bold, 28" tc rgb "#F26822" notitle, \
 "Salsify-nograce.dat" using 3:4 with linespoints ls 6 ps 3 lt rgb "#7f7f7f", \
 "Salsify-nograce.dat" using 3:4:("Salsify (no grace period)") with labels center offset -22, char 0 font "Arial:Bold, 28" tc rgb "#7f7f7f" notitle,\
-"New.dat" using 3:4 with linespoints ls 6 ps 3 lt rgb "#7f7f7f", \
-"New.dat" using 3:4:("Salsify (conventional\ntransport and codec)") with labels center offset 0, char -2 font "Arial:Bold, 28" tc rgb "#7f7f7f" notitle,\
 "Salsify-targetsize.dat" using 3:4 with linespoints ls 6 ps 3 lt rgb "#7f7f7f", \
-"Salsify-targetsize.dat" using 3:4:("Salsify (conventional codec)") with labels center offset 5, char 2 font "Arial:Bold, 28" tc rgb "#7f7f7f" notitle,\
+"Salsify-targetsize.dat" using 3:4:("Salsify (conventional codec)") with labels center offset 5, char 2 font "Arial:Bold, 28" tc rgb "#7f7f7f" notitle
 
 #"Salsify.dat" using 3:4 with linespoints ls 6 ps 3 lt rgb "#DF0000", \
 #"Salsify.dat" using 3:4:("Salsify") with labels center offset 0, char -2 font "Arial:Bold, 28" tc rgb "#DF0000" notitle,\

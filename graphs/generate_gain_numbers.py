@@ -59,7 +59,7 @@ def process_list(experiment_list_file):
     for program, data in programs.items():
         if (program in SKIP) or (program == BASE): continue
         gains['count'] += 1
-        gains['ssim'] += (programs[BASE]['ssim'] - data['ssim'])
+        gains['ssim'] += data['ssim'] / programs[BASE]['ssim']
         gains['delay'] += data['delay'] / programs[BASE]['delay']
 
     return gains
@@ -77,6 +77,6 @@ if __name__ == '__main__':
         total_gains['delay'] += gains['delay']
         total_gains['count'] += gains['count']
 
-    print("SSIM: ", SSIM.n2db(total_gains['ssim'] / total_gains['count']))
+    print("SSIM:  ", 1 / (total_gains['ssim'] / total_gains['count']))
     print("Delay: ", total_gains['delay'] / total_gains['count'])
     print("Count: ", total_gains['count'])

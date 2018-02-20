@@ -232,17 +232,17 @@
 	</g>
 	<g id="gnuplot_plot_13" ><title>"WebRTC.dat" using 3:4</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(242, 104,  34)'  d='M814.4,96.3  '/>	<use xlink:href='#gpPt6' transform='translate(814.4,96.3) scale(13.50)' color='rgb(242, 104,  34)'/>
+	<path stroke='rgb(  0,   0, 160)'  d='M814.4,96.3  '/>	<use xlink:href='#gpPt6' transform='translate(814.4,96.3) scale(13.50)' color='rgb(  0,   0, 160)'/>
 </g>
 	</g>
 	<g id="gnuplot_plot_14" ><title>gnuplot_plot_14</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(839.3,105.4)" stroke="none" fill="rgb(242,104,34)" font-family="Arial:Bold" font-size="28.00"  text-anchor="start">
+	<g transform="translate(839.3,105.4)" stroke="none" fill="rgb(0,0,160)" font-family="Arial:Bold" font-size="28.00"  text-anchor="start">
 		<text><tspan font-family="Arial"  font-weight="bold" >WebRTC</tspan></text>
 	</g>
 </g>
 	</g>
-<g fill="none" color="#FFFFFF" stroke="rgb(242, 104,  34)" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
+<g fill="none" color="#FFFFFF" stroke="rgb(  0,   0, 160)" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
