@@ -193,7 +193,7 @@ set psdir
 set fit brief errorvariables nocovariancevariables errorscaling prescale nowrap v5
 
 plot "WebRTC-SVC.dat" using 3:4 with linespoints ls 1 ps 3 lt rgb "#AC4F1F", \
-"WebRTC-SVC.dat" using 3:4:("WebRTC-SVC") with labels left offset 3, char 0 font "Arial:Bold, 28" tc rgb "#AC4F1F" notitle,\
+"WebRTC-SVC.dat" using 3:4:("WebRTC (VP9-SVC)") with labels left offset 3, char 0 font "Arial:Bold, 28" tc rgb "#AC4F1F" notitle,\
 "Skype.dat" using 3:4 with linespoints ls 2 ps 3 lt rgb "#1A95C2", \
 "Skype.dat" using 3:4:("Skype") with labels left offset 3, char 0 font "Arial:Bold, 28" tc rgb "#1A95C2" notitle,\
 "Hangouts.dat" using 3:4 with linespoints ls 3 ps 3 lt rgb "#7E4CB6", \

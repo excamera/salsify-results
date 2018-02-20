@@ -156,7 +156,7 @@
 	<g id="gnuplot_plot_2" ><title>gnuplot_plot_2</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(175.0,46.1)" stroke="none" fill="rgb(172,79,31)" font-family="Arial:Bold" font-size="28.00"  text-anchor="start">
-		<text><tspan font-family="Arial"  font-weight="bold" >WebRTC-SVC</tspan></text>
+		<text><tspan font-family="Arial"  font-weight="bold" >WebRTC (VP9-SVC)</tspan></text>
 	</g>
 </g>
 	</g>
