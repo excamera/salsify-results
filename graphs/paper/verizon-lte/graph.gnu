@@ -203,8 +203,8 @@ plot "WebRTC-SVC.dat" using 3:4 with linespoints ls 1 ps 3 lt rgb "#AC4F1F", \
 "Facetime.dat" using 3:4:("FaceTime") with labels right offset 18, char 0 font "Arial:Bold, 28" tc rgb "#37A313" notitle,\
 "Hangouts.dat" using 3:4 with linespoints ls 5 ps 3 lt rgb "#7E4CB6", \
 "Hangouts.dat" using 3:4:("Hangouts") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "#7E4CB6" notitle,\
-"Salsify-1.dat" using 3:4 with linespoints ls 7 ps 3 lt rgb "#000000", \
-"Salsify-1.dat" using 3:4:("Salsify-1c") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "#000000" notitle,\
+"Salsify-1.dat" using 3:4 with linespoints ls 7 ps 3 lt rgb "#333333", \
+"Salsify-1.dat" using 3:4:("Salsify-1c") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "#333333" notitle,\
 "WebRTC.dat" using 3:4 with linespoints ls 8 ps 3 lt rgb "#0000a0", \
 "WebRTC.dat" using 3:4:("WebRTC") with labels left offset 3, char 0 font "Arial:Bold, 28" tc rgb "#0000a0" notitle, \
 "Salsify-nograce.dat" using 3:4 with linespoints ls 6 ps 3 lt rgb "#7f7f7f", \

@@ -158,7 +158,7 @@ set y2label ""
 set y2label  font "" textcolor lt -1 rotate by -270
 set xrange [ 16990 : 300 ] noreverse nowriteback
 set yrange [ 7 : 12 ] noreverse nowriteback
-set xtics (100, 200, 300, 500, 700, 1000, 2000, 5000, 7000, 9500, 15000)
+set xtics (100, 200, 300, 500, 700, 1000, 2000, 5000, 15000)
 set y2range [ * : * ] noreverse nowriteback
 set zlabel ""
 set zlabel  font "" textcolor lt -1 norotate
@@ -199,10 +199,10 @@ plot "WebRTC-SVC.dat" using 3:4 with linespoints ls 1 ps 3 lt rgb "#AC4F1F", \
 "Hangouts.dat" using 3:4 with linespoints ls 3 ps 3 lt rgb "#7E4CB6", \
 "Hangouts.dat" using 3:4:("Hangouts") with labels center offset 0, char -2 font "Arial:Bold, 28" tc rgb "#7E4CB6" notitle,\
 "Salsify-1.dat" using 3:4 with linespoints ls 4 ps 3 lt rgb "#333333", \
-"Salsify-1.dat" using 3:4:("Salsify-1") with labels center offset 0, char -2 font "Arial:Bold, 28" tc rgb "#333333" notitle,\
+"Salsify-1.dat" using 3:4:("Salsify-1c") with labels center offset 0, char -2 font "Arial:Bold, 28" tc rgb "#333333" notitle,\
 "FaceTime.dat" using 3:4 with linespoints ls 5 ps 3 lt rgb "#37A313", \
 "FaceTime.dat" using 3:4:("FaceTime") with labels right offset -3, char 0 font "Arial:Bold, 28" tc rgb "#37A313" notitle,\
 "Salsify-2.dat" using 3:4 with linespoints ls 6 ps 3 lt rgb "#DF006F", \
-"Salsify-2.dat" using 3:4:("Salsify-2") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "#DF006F" notitle,\
+"Salsify-2.dat" using 3:4:("Salsify-2c") with labels center offset 0, char 2 font "Arial:Bold, 28" tc rgb "#DF006F" notitle,\
 "WebRTC.dat" using 3:4 with linespoints ls 7 ps 3 lt rgb "#0000a0", \
 "WebRTC.dat" using 3:4:("WebRTC") with labels right offset -3, char 0 font "Arial:Bold, 28" tc rgb "#0000a0" notitle

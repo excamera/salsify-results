@@ -1,271 +1,1250 @@
-<?xml version="1.0" encoding="utf-8"  standalone="no"?>
-<svg 
- width="1000" height="500"
- viewBox="0 0 1000 500"
- xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink"
->
-
-<title>Gnuplot</title>
-<desc>Produced by GNUPLOT 5.0 patchlevel 7 </desc>
-
-<g id="gnuplot_canvas">
-
-<rect x="0" y="0" width="1000" height="500" fill="#ffffff"/>
-<defs>
-
-	<circle id='gpDot' r='0.5' stroke-width='0.5'/>
-	<path id='gpPt0' stroke-width='0.222' stroke='currentColor' d='M-1,0 h2 M0,-1 v2'/>
-	<path id='gpPt1' stroke-width='0.222' stroke='currentColor' d='M-1,-1 L1,1 M1,-1 L-1,1'/>
-	<path id='gpPt2' stroke-width='0.222' stroke='currentColor' d='M-1,0 L1,0 M0,-1 L0,1 M-1,-1 L1,1 M-1,1 L1,-1'/>
-	<rect id='gpPt3' stroke-width='0.222' stroke='currentColor' x='-1' y='-1' width='2' height='2'/>
-	<rect id='gpPt4' stroke-width='0.222' stroke='currentColor' fill='currentColor' x='-1' y='-1' width='2' height='2'/>
-	<circle id='gpPt5' stroke-width='0.222' stroke='currentColor' cx='0' cy='0' r='1'/>
-	<use xlink:href='#gpPt5' id='gpPt6' fill='currentColor' stroke='none'/>
-	<path id='gpPt7' stroke-width='0.222' stroke='currentColor' d='M0,-1.33 L-1.33,0.67 L1.33,0.67 z'/>
-	<use xlink:href='#gpPt7' id='gpPt8' fill='currentColor' stroke='none'/>
-	<use xlink:href='#gpPt7' id='gpPt9' stroke='currentColor' transform='rotate(180)'/>
-	<use xlink:href='#gpPt9' id='gpPt10' fill='currentColor' stroke='none'/>
-	<use xlink:href='#gpPt3' id='gpPt11' stroke='currentColor' transform='rotate(45)'/>
-	<use xlink:href='#gpPt11' id='gpPt12' fill='currentColor' stroke='none'/>
-	<path id='gpPt13' stroke-width='0.222' stroke='currentColor' d='M0,1.330 L1.265,0.411 L0.782,-1.067 L-0.782,-1.076 L-1.265,0.411 z'/>
-	<use xlink:href='#gpPt13' id='gpPt14' fill='currentColor' stroke='none'/>
-	<filter id='textbox' filterUnits='objectBoundingBox' x='0' y='0' height='1' width='1'>
-	  <feFlood flood-color='#FFFFFF' flood-opacity='1' result='bgnd'/>
-	  <feComposite in='SourceGraphic' in2='bgnd' operator='atop'/>
-	</filter>
-	<filter id='greybox' filterUnits='objectBoundingBox' x='0' y='0' height='1' width='1'>
-	  <feFlood flood-color='lightgrey' flood-opacity='1' result='grey'/>
-	  <feComposite in='SourceGraphic' in2='grey' operator='atop'/>
-	</filter>
-</defs>
-<g fill="none" color="#FFFFFF" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M122.2,382.4 L131.2,382.4  '/>	<g transform="translate(113.9,390.2)" stroke="none" fill="black" font-family="Arial" font-size="24.00"  text-anchor="end">
-		<text><tspan font-family="Arial" > 8</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M122.2,309.3 L131.2,309.3  '/>	<g transform="translate(113.9,317.1)" stroke="none" fill="black" font-family="Arial" font-size="24.00"  text-anchor="end">
-		<text><tspan font-family="Arial" > 10</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M122.2,236.1 L131.2,236.1  '/>	<g transform="translate(113.9,243.9)" stroke="none" fill="black" font-family="Arial" font-size="24.00"  text-anchor="end">
-		<text><tspan font-family="Arial" > 12</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M122.2,163.0 L131.2,163.0  '/>	<g transform="translate(113.9,170.8)" stroke="none" fill="black" font-family="Arial" font-size="24.00"  text-anchor="end">
-		<text><tspan font-family="Arial" > 14</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M122.2,89.8 L131.2,89.8  '/>	<g transform="translate(113.9,97.6)" stroke="none" fill="black" font-family="Arial" font-size="24.00"  text-anchor="end">
-		<text><tspan font-family="Arial" > 16</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M122.2,16.7 L131.2,16.7  '/>	<g transform="translate(113.9,24.5)" stroke="none" fill="black" font-family="Arial" font-size="24.00"  text-anchor="end">
-		<text><tspan font-family="Arial" > 18</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M926.8,419.0 L926.8,410.0  '/>	<g transform="translate(926.8,444.8)" stroke="none" fill="black" font-family="Arial" font-size="24.00"  text-anchor="middle">
-		<text><tspan font-family="Arial" >500</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M834.5,419.0 L834.5,410.0  '/>	<g transform="translate(834.5,444.8)" stroke="none" fill="black" font-family="Arial" font-size="24.00"  text-anchor="middle">
-		<text><tspan font-family="Arial" >700</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M736.7,419.0 L736.7,410.0  '/>	<g transform="translate(736.7,444.8)" stroke="none" fill="black" font-family="Arial" font-size="24.00"  text-anchor="middle">
-		<text><tspan font-family="Arial" >1000</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M546.6,419.0 L546.6,410.0  '/>	<g transform="translate(546.6,444.8)" stroke="none" fill="black" font-family="Arial" font-size="24.00"  text-anchor="middle">
-		<text><tspan font-family="Arial" >2000</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M295.3,419.0 L295.3,410.0  '/>	<g transform="translate(295.3,444.8)" stroke="none" fill="black" font-family="Arial" font-size="24.00"  text-anchor="middle">
-		<text><tspan font-family="Arial" >5000</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M203.0,419.0 L203.0,410.0  '/>	<g transform="translate(203.0,444.8)" stroke="none" fill="black" font-family="Arial" font-size="24.00"  text-anchor="middle">
-		<text><tspan font-family="Arial" >7000</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M122.2,16.7 L122.2,419.0 L926.8,419.0 M926.8,16.7 M122.2,16.7  '/></g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(64.2,217.9) rotate(270)" stroke="none" fill="black" font-family="Arial" font-size="28.00"  text-anchor="middle">
-		<text><tspan font-family="Arial" >Video Quality (SSIM dB)</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(948.6,217.9) rotate(270)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="middle">
-		<text></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(524.5,483.9)" stroke="none" fill="black" font-family="Arial" font-size="28.00"  text-anchor="middle">
-		<text><tspan font-family="Arial" >Video Delay (95th percentile ms)</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(524.5,29.6)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="middle">
-		<text></text>
-	</g>
-	<g transform="translate(524.5,29.7)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="middle">
-		<text></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(80.7,482.3)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="start">
-		<text></text>
-	</g>
-</g>
-	<g id="gnuplot_plot_1" ><title>"WebRTC-SVC.dat" using 3:4</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(172,  79,  31)'  d='M273.6,160.8  '/>	<use xlink:href='#gpPt6' transform='translate(273.6,160.8) scale(13.50)' color='rgb(172,  79,  31)'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_2" ><title>gnuplot_plot_2</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(258.7,133.9)" stroke="none" fill="rgb(172,79,31)" font-family="Arial:Bold" font-size="28.00"  text-anchor="start">
-		<text><tspan font-family="Arial"  font-weight="bold" >WebRTC (VP9-SVC)</tspan></text>
-	</g>
-</g>
-	</g>
-	<g id="gnuplot_plot_3" ><title>"Skype.dat" using 3:4</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb( 26, 149, 194)'  d='M219.2,158.6  '/>	<use xlink:href='#gpPt6' transform='translate(219.2,158.6) scale(13.50)' color='rgb( 26, 149, 194)'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_4" ><title>gnuplot_plot_4</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(190.2,131.7)" stroke="none" fill="rgb(26,149,194)" font-family="Arial:Bold" font-size="28.00"  text-anchor="middle">
-		<text><tspan font-family="Arial"  font-weight="bold" >Skype</tspan></text>
-	</g>
-</g>
-	</g>
-	<g id="gnuplot_plot_5" ><title>"Salsify-2.dat" using 3:4</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(223,   0, 111)'  d='M674.0,104.4  '/>	<use xlink:href='#gpPt6' transform='translate(674.0,104.4) scale(13.50)' color='rgb(223,   0, 111)'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_6" ><title>gnuplot_plot_6</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(674.0,77.5)" stroke="none" fill="rgb(223,0,111)" font-family="Arial:Bold" font-size="28.00"  text-anchor="middle">
-		<text><tspan font-family="Arial"  font-weight="bold" >Salsify-2c</tspan></text>
-	</g>
-</g>
-	</g>
-	<g id="gnuplot_plot_7" ><title>"Facetime.dat" using 3:4</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb( 55, 163,  19)'  d='M540.6,165.2  '/>	<use xlink:href='#gpPt6' transform='translate(540.6,165.2) scale(13.50)' color='rgb( 55, 163,  19)'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_8" ><title>gnuplot_plot_8</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(690.0,174.3)" stroke="none" fill="rgb(55,163,19)" font-family="Arial:Bold" font-size="28.00"  text-anchor="end">
-		<text><tspan font-family="Arial"  font-weight="bold" >FaceTime</tspan></text>
-	</g>
-</g>
-	</g>
-	<g id="gnuplot_plot_9" ><title>"Hangouts.dat" using 3:4</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(126,  76, 182)'  d='M588.1,295.9  '/>	<use xlink:href='#gpPt6' transform='translate(588.1,295.9) scale(13.50)' color='rgb(126,  76, 182)'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_10" ><title>gnuplot_plot_10</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(588.1,269.0)" stroke="none" fill="rgb(126,76,182)" font-family="Arial:Bold" font-size="28.00"  text-anchor="middle">
-		<text><tspan font-family="Arial"  font-weight="bold" >Hangouts</tspan></text>
-	</g>
-</g>
-	</g>
-	<g id="gnuplot_plot_11" ><title>"Salsify-1.dat" using 3:4</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M840.9,106.9  '/>	<use xlink:href='#gpPt6' transform='translate(840.9,106.9) scale(13.50)' color='rgb(  0,   0,   0)'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_12" ><title>gnuplot_plot_12</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(840.9,80.0)" stroke="none" fill="rgb(0,0,0)" font-family="Arial:Bold" font-size="28.00"  text-anchor="middle">
-		<text><tspan font-family="Arial"  font-weight="bold" >Salsify-1c</tspan></text>
-	</g>
-</g>
-	</g>
-	<g id="gnuplot_plot_13" ><title>"WebRTC.dat" using 3:4</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0, 160)'  d='M296.6,175.3  '/>	<use xlink:href='#gpPt6' transform='translate(296.6,175.3) scale(13.50)' color='rgb(  0,   0, 160)'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_14" ><title>gnuplot_plot_14</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(321.5,184.4)" stroke="none" fill="rgb(0,0,160)" font-family="Arial:Bold" font-size="28.00"  text-anchor="start">
-		<text><tspan font-family="Arial"  font-weight="bold" >WebRTC</tspan></text>
-	</g>
-</g>
-	</g>
-	<g id="gnuplot_plot_15" ><title>"Salsify-nograce.dat" using 3:4</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(127, 127, 127)'  d='M906.0,380.6  '/>	<use xlink:href='#gpPt6' transform='translate(906.0,380.6) scale(13.50)' color='rgb(127, 127, 127)'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_16" ><title>gnuplot_plot_16</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(723.4,389.7)" stroke="none" fill="rgb(127,127,127)" font-family="Arial:Bold" font-size="28.00"  text-anchor="middle">
-		<text><tspan font-family="Arial"  font-weight="bold" >Salsify (no grace period)</tspan></text>
-	</g>
-</g>
-	</g>
-	<g id="gnuplot_plot_17" ><title>"New.dat" using 3:4</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(127, 127, 127)'  d='M337.1,228.0  '/>	<use xlink:href='#gpPt6' transform='translate(337.1,228.0) scale(13.50)' color='rgb(127, 127, 127)'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_18" ><title>gnuplot_plot_18</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(337.1,273.1)" stroke="none" fill="rgb(127,127,127)" font-family="Arial:Bold" font-size="28.00"  text-anchor="middle">
-		<text><tspan font-family="Arial"  font-weight="bold" >Salsify (conventional</tspan></text>
-	</g>
-	<g transform="translate(337.1,315.1)" stroke="none" fill="rgb(127,127,127)" font-family="Arial:Bold" font-size="28.00"  text-anchor="middle">
-		<text><tspan font-family="Arial"  font-weight="bold" >transport and codec)</tspan></text>
-	</g>
-</g>
-	</g>
-	<g id="gnuplot_plot_19" ><title>"Salsify-targetsize.dat" using 3:4</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(127, 127, 127)'  d='M747.1,258.3  '/>	<use xlink:href='#gpPt6' transform='translate(747.1,258.3) scale(13.50)' color='rgb(127, 127, 127)'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_20" ><title>gnuplot_plot_20</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(788.6,231.4)" stroke="none" fill="rgb(127,127,127)" font-family="Arial:Bold" font-size="28.00"  text-anchor="middle">
-		<text><tspan font-family="Arial"  font-weight="bold" >Salsify (conventional codec)</tspan></text>
-	</g>
-</g>
-	</g>
-<g fill="none" color="#FFFFFF" stroke="rgb(127, 127, 127)" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-</g>
-<g fill="none" color="black" stroke="black" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M122.2,16.7 L122.2,419.0 L926.8,419.0 M926.8,16.7 M122.2,16.7  '/></g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-</g>
-</g>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1000"
+   height="500"
+   viewBox="0 0 1000 500"
+   version="1.1"
+   id="svg421"
+   sodipodi:docname="graph.svg"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
+  <metadata
+     id="metadata427">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs425" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1143"
+     inkscape:window-height="1345"
+     id="namedview423"
+     showgrid="false"
+     inkscape:zoom="0.672"
+     inkscape:cx="549.444"
+     inkscape:cy="360.90056"
+     inkscape:window-x="0"
+     inkscape:window-y="72"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="gnuplot_canvas" />
+  <title
+     id="title2">Gnuplot</title>
+  <desc
+     id="desc4">Produced by GNUPLOT 5.0 patchlevel 7 </desc>
+  <g
+     id="gnuplot_canvas">
+    <rect
+       x="0"
+       y="0"
+       width="1000"
+       height="500"
+       fill="#ffffff"
+       id="rect6" />
+    <defs
+       id="defs34">
+      <circle
+         id="gpDot"
+         r="0.5"
+         stroke-width="0.5" />
+      <path
+         id="gpPt0"
+         stroke-width="0.222"
+         stroke="currentColor"
+         d="M-1,0 h2 M0,-1 v2" />
+      <path
+         id="gpPt1"
+         stroke-width="0.222"
+         stroke="currentColor"
+         d="M-1,-1 L1,1 M1,-1 L-1,1" />
+      <path
+         id="gpPt2"
+         stroke-width="0.222"
+         stroke="currentColor"
+         d="M-1,0 L1,0 M0,-1 L0,1 M-1,-1 L1,1 M-1,1 L1,-1" />
+      <rect
+         id="gpPt3"
+         stroke-width="0.222"
+         stroke="currentColor"
+         x="-1"
+         y="-1"
+         width="2"
+         height="2" />
+      <rect
+         id="gpPt4"
+         stroke-width="0.222"
+         stroke="currentColor"
+         fill="currentColor"
+         x="-1"
+         y="-1"
+         width="2"
+         height="2" />
+      <circle
+         id="gpPt5"
+         stroke-width="0.222"
+         stroke="currentColor"
+         cx="0"
+         cy="0"
+         r="1" />
+      <use
+         xlink:href="#gpPt5"
+         id="gpPt6"
+         fill="currentColor"
+         stroke="none" />
+      <path
+         id="gpPt7"
+         stroke-width="0.222"
+         stroke="currentColor"
+         d="M0,-1.33 L-1.33,0.67 L1.33,0.67 z" />
+      <use
+         xlink:href="#gpPt7"
+         id="gpPt8"
+         fill="currentColor"
+         stroke="none" />
+      <use
+         xlink:href="#gpPt7"
+         id="gpPt9"
+         stroke="currentColor"
+         transform="rotate(180)" />
+      <use
+         xlink:href="#gpPt9"
+         id="gpPt10"
+         fill="currentColor"
+         stroke="none" />
+      <use
+         xlink:href="#gpPt3"
+         id="gpPt11"
+         stroke="currentColor"
+         transform="rotate(45)" />
+      <use
+         xlink:href="#gpPt11"
+         id="gpPt12"
+         fill="currentColor"
+         stroke="none" />
+      <path
+         id="gpPt13"
+         stroke-width="0.222"
+         stroke="currentColor"
+         d="M0,1.330 L1.265,0.411 L0.782,-1.067 L-0.782,-1.076 L-1.265,0.411 z" />
+      <use
+         xlink:href="#gpPt13"
+         id="gpPt14"
+         fill="currentColor"
+         stroke="none" />
+      <filter
+         id="textbox"
+         filterUnits="objectBoundingBox"
+         x="0"
+         y="0"
+         height="1"
+         width="1">
+        <feFlood
+           flood-color="#FFFFFF"
+           flood-opacity="1"
+           result="bgnd"
+           id="feFlood24" />
+        <feComposite
+           in="SourceGraphic"
+           in2="bgnd"
+           operator="atop"
+           id="feComposite26" />
+      </filter>
+      <filter
+         id="greybox"
+         filterUnits="objectBoundingBox"
+         x="0"
+         y="0"
+         height="1"
+         width="1">
+        <feFlood
+           flood-color="lightgrey"
+           flood-opacity="1"
+           result="grey"
+           id="feFlood29" />
+        <feComposite
+           in="SourceGraphic"
+           in2="grey"
+           operator="atop"
+           id="feComposite31" />
+      </filter>
+    </defs>
+    <g
+       fill="none"
+       color="#FFFFFF"
+       stroke="currentColor"
+       stroke-width="1.00"
+       stroke-linecap="butt"
+       stroke-linejoin="miter"
+       id="g36" />
+    <g
+       fill="none"
+       color="black"
+       stroke="currentColor"
+       stroke-width="1.00"
+       stroke-linecap="butt"
+       stroke-linejoin="miter"
+       id="g46">
+      <path
+         stroke="black"
+         d="M122.2,382.4 L131.2,382.4  "
+         id="path38" />
+      <g
+         transform="translate(113.9,390.2)"
+         stroke="none"
+         fill="black"
+         font-family="Arial"
+         font-size="24.00"
+         text-anchor="end"
+         id="g44">
+        <text
+           id="text42">
+          <tspan
+             font-family="Arial"
+             id="tspan40"> 8</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       fill="none"
+       color="black"
+       stroke="currentColor"
+       stroke-width="1.00"
+       stroke-linecap="butt"
+       stroke-linejoin="miter"
+       id="g56">
+      <path
+         stroke="black"
+         d="M122.2,309.3 L131.2,309.3  "
+         id="path48" />
+      <g
+         transform="translate(113.9,317.1)"
+         stroke="none"
+         fill="black"
+         font-family="Arial"
+         font-size="24.00"
+         text-anchor="end"
+         id="g54">
+        <text
+           id="text52">
+          <tspan
+             font-family="Arial"
+             id="tspan50"> 10</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       fill="none"
+       color="black"
+       stroke="currentColor"
+       stroke-width="1.00"
+       stroke-linecap="butt"
+       stroke-linejoin="miter"
+       id="g66">
+      <path
+         stroke="black"
+         d="M122.2,236.1 L131.2,236.1  "
+         id="path58" />
+      <g
+         transform="translate(113.9,243.9)"
+         stroke="none"
+         fill="black"
+         font-family="Arial"
+         font-size="24.00"
+         text-anchor="end"
+         id="g64">
+        <text
+           id="text62">
+          <tspan
+             font-family="Arial"
+             id="tspan60"> 12</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       fill="none"
+       color="black"
+       stroke="currentColor"
+       stroke-width="1.00"
+       stroke-linecap="butt"
+       stroke-linejoin="miter"
+       id="g76">
+      <path
+         stroke="black"
+         d="M122.2,163.0 L131.2,163.0  "
+         id="path68" />
+      <g
+         transform="translate(113.9,170.8)"
+         stroke="none"
+         fill="black"
+         font-family="Arial"
+         font-size="24.00"
+         text-anchor="end"
+         id="g74">
+        <text
+           id="text72">
+          <tspan
+             font-family="Arial"
+             id="tspan70"> 14</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       fill="none"
+       color="black"
+       stroke="currentColor"
+       stroke-width="1.00"
+       stroke-linecap="butt"
+       stroke-linejoin="miter"
+       id="g86">
+      <path
+         stroke="black"
+         d="M122.2,89.8 L131.2,89.8  "
+         id="path78" />
+      <g
+         transform="translate(113.9,97.6)"
+         stroke="none"
+         fill="black"
+         font-family="Arial"
+         font-size="24.00"
+         text-anchor="end"
+         id="g84">
+        <text
+           id="text82">
+          <tspan
+             font-family="Arial"
+             id="tspan80"> 16</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       fill="none"
+       color="black"
+       stroke="currentColor"
+       stroke-width="1.00"
+       stroke-linecap="butt"
+       stroke-linejoin="miter"
+       id="g96">
+      <path
+         stroke="black"
+         d="M122.2,16.7 L131.2,16.7  "
+         id="path88" />
+      <g
+         transform="translate(113.9,24.5)"
+         stroke="none"
+         fill="black"
+         font-family="Arial"
+         font-size="24.00"
+         text-anchor="end"
+         id="g94">
+        <text
+           id="text92">
+          <tspan
+             font-family="Arial"
+             id="tspan90"> 18</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       fill="none"
+       color="black"
+       stroke="currentColor"
+       stroke-width="1.00"
+       stroke-linecap="butt"
+       stroke-linejoin="miter"
+       id="g106">
+      <path
+         stroke="black"
+         d="M926.8,419.0 L926.8,410.0  "
+         id="path98" />
+      <g
+         transform="translate(926.8,444.8)"
+         stroke="none"
+         fill="black"
+         font-family="Arial"
+         font-size="24.00"
+         text-anchor="middle"
+         id="g104">
+        <text
+           id="text102">
+          <tspan
+             font-family="Arial"
+             id="tspan100">500</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       fill="none"
+       color="black"
+       stroke="currentColor"
+       stroke-width="1.00"
+       stroke-linecap="butt"
+       stroke-linejoin="miter"
+       id="g116">
+      <path
+         stroke="black"
+         d="M834.5,419.0 L834.5,410.0  "
+         id="path108" />
+      <g
+         transform="translate(834.5,444.8)"
+         stroke="none"
+         fill="black"
+         font-family="Arial"
+         font-size="24.00"
+         text-anchor="middle"
+         id="g114">
+        <text
+           id="text112">
+          <tspan
+             font-family="Arial"
+             id="tspan110">700</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       fill="none"
+       color="black"
+       stroke="currentColor"
+       stroke-width="1.00"
+       stroke-linecap="butt"
+       stroke-linejoin="miter"
+       id="g126">
+      <path
+         stroke="black"
+         d="M736.7,419.0 L736.7,410.0  "
+         id="path118" />
+      <g
+         transform="translate(736.7,444.8)"
+         stroke="none"
+         fill="black"
+         font-family="Arial"
+         font-size="24.00"
+         text-anchor="middle"
+         id="g124">
+        <text
+           id="text122">
+          <tspan
+             font-family="Arial"
+             id="tspan120">1000</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       fill="none"
+       color="black"
+       stroke="currentColor"
+       stroke-width="1.00"
+       stroke-linecap="butt"
+       stroke-linejoin="miter"
+       id="g136">
+      <path
+         stroke="black"
+         d="M546.6,419.0 L546.6,410.0  "
+         id="path128" />
+      <g
+         transform="translate(546.6,444.8)"
+         stroke="none"
+         fill="black"
+         font-family="Arial"
+         font-size="24.00"
+         text-anchor="middle"
+         id="g134">
+        <text
+           id="text132">
+          <tspan
+             font-family="Arial"
+             id="tspan130">2000</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       fill="none"
+       color="black"
+       stroke="currentColor"
+       stroke-width="1.00"
+       stroke-linecap="butt"
+       stroke-linejoin="miter"
+       id="g146">
+      <path
+         stroke="black"
+         d="M295.3,419.0 L295.3,410.0  "
+         id="path138" />
+      <g
+         transform="translate(295.3,444.8)"
+         stroke="none"
+         fill="black"
+         font-family="Arial"
+         font-size="24.00"
+         text-anchor="middle"
+         id="g144">
+        <text
+           id="text142">
+          <tspan
+             font-family="Arial"
+             id="tspan140">5000</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       fill="none"
+       color="black"
+       stroke="currentColor"
+       stroke-width="1.00"
+       stroke-linecap="butt"
+       stroke-linejoin="miter"
+       id="g156">
+      <path
+         stroke="black"
+         d="M203.0,419.0 L203.0,410.0  "
+         id="path148" />
+      <g
+         transform="translate(203.0,444.8)"
+         stroke="none"
+         fill="black"
+         font-family="Arial"
+         font-size="24.00"
+         text-anchor="middle"
+         id="g154">
+        <text
+           id="text152">
+          <tspan
+             font-family="Arial"
+             id="tspan150">7000</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       fill="none"
+       color="black"
+       stroke="currentColor"
+       stroke-width="1.00"
+       stroke-linecap="butt"
+       stroke-linejoin="miter"
+       id="g158" />
+    <g
+       fill="none"
+       color="black"
+       stroke="currentColor"
+       stroke-width="1.00"
+       stroke-linecap="butt"
+       stroke-linejoin="miter"
+       id="g162">
+      <path
+         stroke="black"
+         d="M122.2,16.7 L122.2,419.0 L926.8,419.0 M926.8,16.7 M122.2,16.7  "
+         id="path160" />
+    </g>
+    <g
+       fill="none"
+       color="black"
+       stroke="currentColor"
+       stroke-width="1.00"
+       stroke-linecap="butt"
+       stroke-linejoin="miter"
+       id="g170">
+      <g
+         transform="translate(64.2,217.9) rotate(270)"
+         stroke="none"
+         fill="black"
+         font-family="Arial"
+         font-size="28.00"
+         text-anchor="middle"
+         id="g168">
+        <text
+           id="text166">
+          <tspan
+             font-family="Arial"
+             id="tspan164">Video Quality (SSIM dB)</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       fill="none"
+       color="black"
+       stroke="currentColor"
+       stroke-width="1.00"
+       stroke-linecap="butt"
+       stroke-linejoin="miter"
+       id="g176">
+      <g
+         transform="translate(948.6,217.9) rotate(270)"
+         stroke="none"
+         fill="black"
+         font-family="Arial"
+         font-size="12.00"
+         text-anchor="middle"
+         id="g174">
+        <text
+           id="text172" />
+      </g>
+    </g>
+    <g
+       fill="none"
+       color="black"
+       stroke="currentColor"
+       stroke-width="1.00"
+       stroke-linecap="butt"
+       stroke-linejoin="miter"
+       id="g184">
+      <g
+         transform="translate(524.5,483.9)"
+         stroke="none"
+         fill="black"
+         font-family="Arial"
+         font-size="28.00"
+         text-anchor="middle"
+         id="g182">
+        <text
+           id="text180">
+          <tspan
+             font-family="Arial"
+             id="tspan178">Video Delay (95th percentile ms)</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       fill="none"
+       color="black"
+       stroke="currentColor"
+       stroke-width="1.00"
+       stroke-linecap="butt"
+       stroke-linejoin="miter"
+       id="g194">
+      <g
+         transform="translate(524.5,29.6)"
+         stroke="none"
+         fill="black"
+         font-family="Arial"
+         font-size="12.00"
+         text-anchor="middle"
+         id="g188">
+        <text
+           id="text186" />
+      </g>
+      <g
+         transform="translate(524.5,29.7)"
+         stroke="none"
+         fill="black"
+         font-family="Arial"
+         font-size="12.00"
+         text-anchor="middle"
+         id="g192">
+        <text
+           id="text190" />
+      </g>
+    </g>
+    <g
+       fill="none"
+       color="black"
+       stroke="currentColor"
+       stroke-width="1.00"
+       stroke-linecap="butt"
+       stroke-linejoin="miter"
+       id="g200">
+      <g
+         transform="translate(80.7,482.3)"
+         stroke="none"
+         fill="black"
+         font-family="Arial"
+         font-size="12.00"
+         text-anchor="start"
+         id="g198">
+        <text
+           id="text196" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_1">
+      <title
+         id="title202">&quot;WebRTC-SVC.dat&quot; using 3:4</title>
+      <g
+         fill="none"
+         color="black"
+         stroke="currentColor"
+         stroke-width="1.00"
+         stroke-linecap="butt"
+         stroke-linejoin="miter"
+         id="g208">
+        <path
+           stroke="rgb(172,  79,  31)"
+           d="M273.6,160.8  "
+           id="path204" />
+        <use
+           xlink:href="#gpPt6"
+           transform="translate(273.6,160.8) scale(13.50)"
+           color="rgb(172,  79,  31)"
+           id="use206" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_2">
+      <title
+         id="title211">gnuplot_plot_2</title>
+      <g
+         fill="none"
+         color="black"
+         stroke="currentColor"
+         stroke-width="1.00"
+         stroke-linecap="butt"
+         stroke-linejoin="miter"
+         id="g219">
+        <g
+           transform="translate(258.7,133.9)"
+           stroke="none"
+           fill="rgb(172,79,31)"
+           font-family="Arial:Bold"
+           font-size="28.00"
+           text-anchor="start"
+           id="g217">
+          <text
+             id="text215">
+            <tspan
+               font-family="Arial"
+               font-weight="bold"
+               id="tspan213">WebRTC (VP9-SVC)</tspan>
+          </text>
+        </g>
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_3">
+      <title
+         id="title222">&quot;Skype.dat&quot; using 3:4</title>
+      <g
+         fill="none"
+         color="black"
+         stroke="currentColor"
+         stroke-width="1.00"
+         stroke-linecap="butt"
+         stroke-linejoin="miter"
+         id="g228">
+        <path
+           stroke="rgb( 26, 149, 194)"
+           d="M219.2,158.6  "
+           id="path224" />
+        <use
+           xlink:href="#gpPt6"
+           transform="translate(219.2,158.6) scale(13.50)"
+           color="rgb( 26, 149, 194)"
+           id="use226" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_4">
+      <title
+         id="title231">gnuplot_plot_4</title>
+      <g
+         fill="none"
+         color="black"
+         stroke="currentColor"
+         stroke-width="1.00"
+         stroke-linecap="butt"
+         stroke-linejoin="miter"
+         id="g239">
+        <g
+           transform="translate(190.2,131.7)"
+           stroke="none"
+           fill="rgb(26,149,194)"
+           font-family="Arial:Bold"
+           font-size="28.00"
+           text-anchor="middle"
+           id="g237">
+          <text
+             id="text235">
+            <tspan
+               font-family="Arial"
+               font-weight="bold"
+               id="tspan233">Skype</tspan>
+          </text>
+        </g>
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_5">
+      <title
+         id="title242">&quot;Salsify-2.dat&quot; using 3:4</title>
+      <g
+         fill="none"
+         color="black"
+         stroke="currentColor"
+         stroke-width="1.00"
+         stroke-linecap="butt"
+         stroke-linejoin="miter"
+         id="g248">
+        <path
+           stroke="rgb(223,   0, 111)"
+           d="M674.0,104.4  "
+           id="path244" />
+        <use
+           xlink:href="#gpPt6"
+           transform="translate(674.0,104.4) scale(13.50)"
+           color="rgb(223,   0, 111)"
+           id="use246" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_6">
+      <title
+         id="title251">gnuplot_plot_6</title>
+      <g
+         fill="none"
+         color="black"
+         stroke="currentColor"
+         stroke-width="1.00"
+         stroke-linecap="butt"
+         stroke-linejoin="miter"
+         id="g259">
+        <g
+           transform="translate(674.0,77.5)"
+           stroke="none"
+           fill="rgb(223,0,111)"
+           font-family="Arial:Bold"
+           font-size="28.00"
+           text-anchor="middle"
+           id="g257">
+          <text
+             id="text255">
+            <tspan
+               font-family="Arial"
+               font-weight="bold"
+               id="tspan253">Salsify-2c</tspan>
+          </text>
+        </g>
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_7">
+      <title
+         id="title262">&quot;Facetime.dat&quot; using 3:4</title>
+      <g
+         fill="none"
+         color="black"
+         stroke="currentColor"
+         stroke-width="1.00"
+         stroke-linecap="butt"
+         stroke-linejoin="miter"
+         id="g268">
+        <path
+           stroke="rgb( 55, 163,  19)"
+           d="M540.6,165.2  "
+           id="path264" />
+        <use
+           xlink:href="#gpPt6"
+           transform="translate(540.6,165.2) scale(13.50)"
+           color="rgb( 55, 163,  19)"
+           id="use266" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_8">
+      <title
+         id="title271">gnuplot_plot_8</title>
+      <g
+         fill="none"
+         color="black"
+         stroke="currentColor"
+         stroke-width="1.00"
+         stroke-linecap="butt"
+         stroke-linejoin="miter"
+         id="g279">
+        <g
+           transform="translate(690.0,174.3)"
+           stroke="none"
+           fill="rgb(55,163,19)"
+           font-family="Arial:Bold"
+           font-size="28.00"
+           text-anchor="end"
+           id="g277">
+          <text
+             id="text275">
+            <tspan
+               font-family="Arial"
+               font-weight="bold"
+               id="tspan273">FaceTime</tspan>
+          </text>
+        </g>
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_9">
+      <title
+         id="title282">&quot;Hangouts.dat&quot; using 3:4</title>
+      <g
+         fill="none"
+         color="black"
+         stroke="currentColor"
+         stroke-width="1.00"
+         stroke-linecap="butt"
+         stroke-linejoin="miter"
+         id="g288">
+        <path
+           stroke="rgb(126,  76, 182)"
+           d="M588.1,295.9  "
+           id="path284" />
+        <use
+           xlink:href="#gpPt6"
+           transform="translate(588.1,295.9) scale(13.50)"
+           color="rgb(126,  76, 182)"
+           id="use286" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_10"
+       transform="translate(0,70)">
+      <title
+         id="title291">gnuplot_plot_10</title>
+      <g
+         id="g299"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <g
+           transform="translate(588.1,269)"
+           font-size="28.00"
+           id="g297"
+           style="font-size:28px;font-family:'Arial:Bold';text-anchor:middle;fill:#7e4cb6;stroke:none">
+          <text
+             id="text295">
+            <tspan
+               font-weight="bold"
+               id="tspan293"
+               style="font-weight:bold;font-family:Arial">Hangouts</tspan>
+          </text>
+        </g>
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_11">
+      <title
+         id="title302">&quot;Salsify-1.dat&quot; using 3:4</title>
+      <g
+         fill="none"
+         color="black"
+         stroke="currentColor"
+         stroke-width="1.00"
+         stroke-linecap="butt"
+         stroke-linejoin="miter"
+         id="g308">
+        <path
+           stroke="rgb( 51,  51,  51)"
+           d="M840.9,106.9  "
+           id="path304" />
+        <use
+           xlink:href="#gpPt6"
+           transform="translate(840.9,106.9) scale(13.50)"
+           color="rgb( 51,  51,  51)"
+           id="use306" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_12">
+      <title
+         id="title311">gnuplot_plot_12</title>
+      <g
+         fill="none"
+         color="black"
+         stroke="currentColor"
+         stroke-width="1.00"
+         stroke-linecap="butt"
+         stroke-linejoin="miter"
+         id="g319">
+        <g
+           transform="translate(840.9,80.0)"
+           stroke="none"
+           fill="rgb(51,51,51)"
+           font-family="Arial:Bold"
+           font-size="28.00"
+           text-anchor="middle"
+           id="g317">
+          <text
+             id="text315">
+            <tspan
+               font-family="Arial"
+               font-weight="bold"
+               id="tspan313">Salsify-1c</tspan>
+          </text>
+        </g>
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_13">
+      <title
+         id="title322">&quot;WebRTC.dat&quot; using 3:4</title>
+      <g
+         fill="none"
+         color="black"
+         stroke="currentColor"
+         stroke-width="1.00"
+         stroke-linecap="butt"
+         stroke-linejoin="miter"
+         id="g328">
+        <path
+           stroke="rgb(  0,   0, 160)"
+           d="M296.6,175.3  "
+           id="path324" />
+        <use
+           xlink:href="#gpPt6"
+           transform="translate(296.6,175.3) scale(13.50)"
+           color="rgb(  0,   0, 160)"
+           id="use326" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_14">
+      <title
+         id="title331">gnuplot_plot_14</title>
+      <g
+         fill="none"
+         color="black"
+         stroke="currentColor"
+         stroke-width="1.00"
+         stroke-linecap="butt"
+         stroke-linejoin="miter"
+         id="g339">
+        <g
+           transform="translate(321.5,184.4)"
+           stroke="none"
+           fill="rgb(0,0,160)"
+           font-family="Arial:Bold"
+           font-size="28.00"
+           text-anchor="start"
+           id="g337">
+          <text
+             id="text335">
+            <tspan
+               font-family="Arial"
+               font-weight="bold"
+               id="tspan333">WebRTC</tspan>
+          </text>
+        </g>
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_15">
+      <title
+         id="title342">&quot;Salsify-nograce.dat&quot; using 3:4</title>
+      <g
+         fill="none"
+         color="black"
+         stroke="currentColor"
+         stroke-width="1.00"
+         stroke-linecap="butt"
+         stroke-linejoin="miter"
+         id="g348">
+        <path
+           stroke="rgb(127, 127, 127)"
+           d="M906.0,380.6  "
+           id="path344" />
+        <use
+           xlink:href="#gpPt6"
+           transform="translate(906.0,380.6) scale(13.50)"
+           color="rgb(127, 127, 127)"
+           id="use346" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_16"
+       transform="translate(-2)">
+      <title
+         id="title351">gnuplot_plot_16</title>
+      <g
+         id="g359"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <g
+           transform="translate(723.4,389.7)"
+           font-size="28.00"
+           id="g357"
+           style="font-size:28px;font-family:'Arial:Bold';text-anchor:middle;fill:#7f7f7f;stroke:none">
+          <text
+             id="text355">
+            <tspan
+               font-weight="bold"
+               id="tspan353"
+               style="font-weight:bold;font-family:Arial">Salsify (no grace period)</tspan>
+          </text>
+        </g>
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_17">
+      <title
+         id="title362">&quot;New.dat&quot; using 3:4</title>
+      <g
+         fill="none"
+         color="black"
+         stroke="currentColor"
+         stroke-width="1.00"
+         stroke-linecap="butt"
+         stroke-linejoin="miter"
+         id="g368">
+        <path
+           stroke="rgb(127, 127, 127)"
+           d="M337.1,228.0  "
+           id="path364" />
+        <use
+           xlink:href="#gpPt6"
+           transform="translate(337.1,228.0) scale(13.50)"
+           color="rgb(127, 127, 127)"
+           id="use366" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_18">
+      <title
+         id="title371">gnuplot_plot_18</title>
+      <g
+         id="g385"
+         stroke-linejoin="miter"
+         stroke-linecap="butt"
+         stroke-width="1.00"
+         stroke="currentColor"
+         fill="none"
+         color="black">
+        <g
+           transform="translate(337.1,273.1)"
+           font-size="28.00"
+           id="g377"
+           text-anchor="middle"
+           font-family="Arial:Bold"
+           stroke="none"
+           fill="rgb(127,127,127)">
+          <text
+             id="text375">
+            <tspan
+               font-weight="bold"
+               id="tspan373"
+               font-family="Arial">Salsify (conventional</tspan>
+          </text>
+        </g>
+        <g
+           transform="translate(337.1,307.1)"
+           font-size="28.00"
+           id="g383"
+           style="font-size:28px;font-family:'Arial:Bold';text-anchor:middle;fill:#7f7f7f;stroke:none">
+          <text
+             id="text381">
+            <tspan
+               font-weight="bold"
+               id="tspan379"
+               style="font-weight:bold;font-family:Arial">transport and codec)</tspan>
+          </text>
+        </g>
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_19">
+      <title
+         id="title388">&quot;Salsify-targetsize.dat&quot; using 3:4</title>
+      <g
+         fill="none"
+         color="black"
+         stroke="currentColor"
+         stroke-width="1.00"
+         stroke-linecap="butt"
+         stroke-linejoin="miter"
+         id="g394">
+        <path
+           stroke="rgb(127, 127, 127)"
+           d="M747.1,258.3  "
+           id="path390" />
+        <use
+           xlink:href="#gpPt6"
+           transform="translate(747.1,258.3) scale(13.50)"
+           color="rgb(127, 127, 127)"
+           id="use392" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_20">
+      <title
+         id="title397">gnuplot_plot_20</title>
+      <g
+         fill="none"
+         color="black"
+         stroke="currentColor"
+         stroke-width="1.00"
+         stroke-linecap="butt"
+         stroke-linejoin="miter"
+         id="g405">
+        <g
+           transform="translate(788.6,231.4)"
+           stroke="none"
+           fill="rgb(127,127,127)"
+           font-family="Arial:Bold"
+           font-size="28.00"
+           text-anchor="middle"
+           id="g403">
+          <text
+             id="text401">
+            <tspan
+               font-family="Arial"
+               font-weight="bold"
+               id="tspan399">Salsify (conventional codec)</tspan>
+          </text>
+        </g>
+      </g>
+    </g>
+    <g
+       fill="none"
+       color="#FFFFFF"
+       stroke="rgb(127, 127, 127)"
+       stroke-width="2.00"
+       stroke-linecap="butt"
+       stroke-linejoin="miter"
+       id="g408" />
+    <g
+       fill="none"
+       color="black"
+       stroke="currentColor"
+       stroke-width="2.00"
+       stroke-linecap="butt"
+       stroke-linejoin="miter"
+       id="g410" />
+    <g
+       fill="none"
+       color="black"
+       stroke="black"
+       stroke-width="1.00"
+       stroke-linecap="butt"
+       stroke-linejoin="miter"
+       id="g412" />
+    <g
+       fill="none"
+       color="black"
+       stroke="currentColor"
+       stroke-width="1.00"
+       stroke-linecap="butt"
+       stroke-linejoin="miter"
+       id="g416">
+      <path
+         stroke="black"
+         d="M122.2,16.7 L122.2,419.0 L926.8,419.0 M926.8,16.7 M122.2,16.7  "
+         id="path414" />
+    </g>
+    <g
+       fill="none"
+       color="black"
+       stroke="currentColor"
+       stroke-width="1.00"
+       stroke-linecap="butt"
+       stroke-linejoin="miter"
+       id="g418" />
+  </g>
 </svg>
-

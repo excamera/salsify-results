@@ -208,24 +208,24 @@
 	</g>
 	<g id="gnuplot_plot_9" ><title>"Salsify-1.dat" using 3:4</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb( 51,  51,  51)'  d='M719.7,77.2  '/>	<use xlink:href='#gpPt6' transform='translate(719.7,77.2) scale(13.50)' color='rgb( 51,  51,  51)'/>
+	<path stroke='rgb( 51,  51,  51)'  d='M644.8,72.9  '/>	<use xlink:href='#gpPt6' transform='translate(644.8,72.9) scale(13.50)' color='rgb( 51,  51,  51)'/>
 </g>
 	</g>
 	<g id="gnuplot_plot_10" ><title>gnuplot_plot_10</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(707.3,54.8)" stroke="none" fill="rgb(51,51,51)" font-family="Arial:Bold" font-size="28.00"  text-anchor="start">
+	<g transform="translate(619.9,82.0)" stroke="none" fill="rgb(51,51,51)" font-family="Arial:Bold" font-size="28.00"  text-anchor="end">
 		<text><tspan font-family="Arial"  font-weight="bold" >Salsify-1c</tspan></text>
 	</g>
 </g>
 	</g>
 	<g id="gnuplot_plot_11" ><title>"Salsify-2.dat" using 3:4</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(223,   0, 111)'  d='M644.8,72.9  '/>	<use xlink:href='#gpPt6' transform='translate(644.8,72.9) scale(13.50)' color='rgb(223,   0, 111)'/>
+	<path stroke='rgb(223,   0, 111)'  d='M719.7,77.2  '/>	<use xlink:href='#gpPt6' transform='translate(719.7,77.2) scale(13.50)' color='rgb(223,   0, 111)'/>
 </g>
 	</g>
 	<g id="gnuplot_plot_12" ><title>gnuplot_plot_12</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(491.3,82.0)" stroke="none" fill="rgb(223,0,111)" font-family="Arial:Bold" font-size="28.00"  text-anchor="start">
+	<g transform="translate(719.7,50.3)" stroke="none" fill="rgb(223,0,111)" font-family="Arial:Bold" font-size="28.00"  text-anchor="middle">
 		<text><tspan font-family="Arial"  font-weight="bold" >Salsify-2c</tspan></text>
 	</g>
 </g>

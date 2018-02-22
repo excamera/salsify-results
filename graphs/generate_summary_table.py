@@ -68,6 +68,7 @@ def process_list(experiment_list_file):
             data = get_data_for(os.path.join(BENCHMARKS_ROOT, path))
 
             programs[label] = {
+                'link': 'https://github.com/excamera/salsify-results/tree/master/benchmarks/%s' % path,
                 'ssim-p25': "%.1f" % float(data['ssim']['p25']),
                 'ssim-mean': "%.1f" % float(data['ssim']['mean']),
                 'delay-mean': "%.1f" % float(data['signal_delay']['mean']),
@@ -93,10 +94,12 @@ if __name__ == '__main__':
         results[trace] = process_list(trace)
 
     for trace in sys.argv[1:]:
+        i = 0
+        total_count = len([k for k, _ in ORDER if k in results[trace]])
         for k, v in ORDER:
             if k in results[trace]:
-                print("{system} & {trace} & {ssim_p25_best}{ssim_p25}{skewed_ssim} & {ssim_mean_best}{ssim_mean} & & {delay_mean_best}{delay_mean} & {delay_p95_best}{delay_p95} \\\\".format(
-                    system=v, trace=TRACES.get(trace, trace),
+                print("{system} & {trace} & {ssim_p25_best}{ssim_p25}{skewed_ssim} & {ssim_mean_best}{ssim_mean} & & {delay_mean_best}{delay_mean} & {delay_p95_best}{delay_p95} & {link} \\\\".format(
+                    system=v, trace="\multirow{%d}{*}{%s}" % (total_count, TRACES.get(trace, trace)) if i == 0 else '',
                     ssim_p25_best=winner(results[trace], 'ssim-p25', results[trace][k]['ssim-p25'], max),
                     ssim_p25=results[trace][k]['ssim-p25'],
                     skewed_ssim='*' if float(results[trace][k]['ssim-p25']) > float(results[trace][k]['ssim-mean']) else '',
@@ -106,6 +109,9 @@ if __name__ == '__main__':
                     delay_mean=results[trace][k]['delay-mean'],
                     delay_p95_best=winner(results[trace], 'delay-p95', results[trace][k]['delay-p95'], min),
                     delay_p95=results[trace][k]['delay-p95'],
+                    link="\href{%s}{\ExternalLink}" % results[trace][k]['link']
                 ))
 
-        print("& & & & & & \\\\")
+                i += 1
+
+        print("& & & & & & \\\\[-1ex]\\hline\\\\[-1ex]")

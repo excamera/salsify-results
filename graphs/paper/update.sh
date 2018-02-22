@@ -3,7 +3,8 @@
 DIRS=(att-lte
       on-off
       tmobile-umts
-      verizon-lte)
+      verizon-lte
+      wifi)
 
 for dir in ${DIRS[@]}; do
     cd $dir
